@@ -7,7 +7,7 @@ lang:
 
 ## `history`
 
-Prints history of given commands.
+Prints commands history.
 
 ```bash
 history
