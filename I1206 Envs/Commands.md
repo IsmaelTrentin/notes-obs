@@ -63,7 +63,6 @@ Common args:
 	- `\;`: exec command for each result
 
 ```bash
+# find files ending with `.jpg` and copy them one by one to `/destination`
 find / -name '*.jpg' -exec copy {} /destination \;
 ```
-
-> find all files ending with `.jpg` and copy them one by one to the folder `/destination`
