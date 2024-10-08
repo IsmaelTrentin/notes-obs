@@ -102,3 +102,8 @@ Contents from `file.txt` are read by the shell and passed to the program via `st
 ```bash
 cat < file.txt
 ```
+
+## Conditional run
+
+`&&`: continue only if previous command was successful, otherwise stop.
+`||`: continue only if previous command failed, otherwise stop.
