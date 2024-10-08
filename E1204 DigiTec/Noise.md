@@ -7,6 +7,8 @@ lang:
 todo: true
 ---
 
+Measured in $Volts$.
+
 $$\begin{alignat*}{1}
 & NM_{H} = V_{OH} - V_{IH} = \Delta V_{H}\\
 & NM_{L} = V_{IL} - V_{OL} \\
