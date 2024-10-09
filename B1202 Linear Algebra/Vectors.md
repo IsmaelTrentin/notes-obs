@@ -28,8 +28,7 @@ Two vectors are defined as **linearly dependent** if one can be expressed as a [
 
 ### Sets and bases of $\mathbb{R}^n$
 
-Having more vectors than $n$ in $\mathbb{R}^n$ guarantees that $N_{vecs} - n$ are [[#Dependency|linearly dependent]].
-To create a valid base for $\mathbb{R}^n$ all vectors need to be [[#Dependency|linearly independent]] from each other. If any of the vectors can be expressed as a [[#Linear Combination]] of one, then the base will not be $\mathbb{R}^n$ but a [[#Dimension]] of $n$, where $n$ is the number of [[#Dependency|linearly independent]] vectors.
+Having more vectors than $n$ in $\mathbb{R}^n$ guarantees that $N_{vecs} - n$ are [[#Dependency|linearly dependent]]. To create a valid base for $\mathbb{R}^n$ all vectors need to be [[#Dependency|linearly independent]] from each other. If any of the vectors can be expressed as a [[#Linear Combination]] of one, then the base will not be $\mathbb{R}^n$ but a [[#Dimension]] of $n$, where $n$ is the number of [[#Dependency|linearly independent]] vectors.
 
 ### Dimension
 
@@ -123,6 +122,34 @@ such that if $k=2$:
 $$2\vec{v} = \vec{u}$$
 
 $$\vec{v} = \frac{1}{2}\vec{u}$$
+
+### Dot Product
+
+Given vectors as input, it returns a number. It is defined as:
+
+$$
+\vec{v} \cdot \vec{u} = \begin{bmatrix}
+v_{a} \\
+v_{b}
+\end{bmatrix} \cdot
+\begin{bmatrix}
+u_{a} \\
+u_{b}
+\end{bmatrix}
+$$
+
+or
+
+$$\vec{v} \cdot \vec{u} = ||\vec{v}|| \cdot ||\vec{u}|| \cdot \cos \alpha$$
+$$\cos \alpha = \frac{\vec{v} \cdot \vec{u}}{||\vec{v}|| \cdot ||\vec{u}||}$$
+
+If the dot product of two vectors returns $0$, they are **orthogonal**, meaning the angle in between them is $\frac{\pi}{2}$ or $90\degree$.
+
+### Module
+
+Uses the Pythagorean Theorem and [[#Dot Product]] with $\alpha=0$ ($\cos 0 = 1$) to get the module (_length_) of the given vector.
+
+$$||\vec{v}|| = \sqrt{ \vec{v} \cdot \vec{v} } = \sqrt{ ||\vec{v}||^2 \cdot \cos 0} $$
 
 ## [[🛠️]] Applications
 
