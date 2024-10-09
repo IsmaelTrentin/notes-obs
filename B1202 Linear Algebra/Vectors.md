@@ -4,6 +4,7 @@ tags:
 lang:
   - en
 ---
+
 ## Definition
 
 Used to define complex systems.
@@ -128,14 +129,7 @@ $$\vec{v} = \frac{1}{2}\vec{u}$$
 Given vectors as input, it returns a number. It is defined as:
 
 $$
-\vec{v} \cdot \vec{u} = \begin{bmatrix}
-v_{a} \\
-v_{b}
-\end{bmatrix} \cdot
-\begin{bmatrix}
-u_{a} \\
-u_{b}
-\end{bmatrix}
+\mathbb{R}^2 \implies \vec{v} \cdot \vec{u} = v_{a} \cdot u_{a} + v_{b} \cdot u_{b} \dots
 $$
 
 or
@@ -149,7 +143,7 @@ If the dot product of two vectors returns $0$, they are **orthogonal**, meaning 
 
 Uses the Pythagorean Theorem and [[#Dot Product]] with $\alpha=0$ ($\cos 0 = 1$) to get the module (_length_) of the given vector.
 
-$$||\vec{v}|| = \sqrt{ \vec{v} \cdot \vec{v} } = \sqrt{ ||\vec{v}||^2 \cdot \cos 0} $$
+$$\mathbb{R}^2 \implies ||\vec{v}|| = \sqrt{ v_{a} \cdot v_{b} } = \sqrt{ ||\vec{v}||^2 \cdot \cos 0} $$
 
 ## [[🛠️]] Applications
 
