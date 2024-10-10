@@ -1,6 +1,7 @@
 ---
 tags:
   - linear-algebra
+  - todo
 lang:
   - en
 ---
@@ -129,7 +130,7 @@ $$\vec{v} = \frac{1}{2}\vec{u}$$
 Given vectors as input, it returns a number. It is defined as:
 
 $$
-\mathbb{R}^2 \implies \vec{v} \cdot \vec{u} = v_{a} \cdot u_{a} + v_{b} \cdot u_{b} \dots
+\vec{v}, \vec{u} : \mathbb{R}^2 \implies \vec{v} \cdot \vec{u} = v_{a} \cdot u_{a} + v_{b} \cdot u_{b} \dots
 $$
 
 or
@@ -137,7 +138,7 @@ or
 $$\vec{v} \cdot \vec{u} = ||\vec{v}|| \cdot ||\vec{u}|| \cdot \cos \alpha$$
 $$\cos \alpha = \frac{\vec{v} \cdot \vec{u}}{||\vec{v}|| \cdot ||\vec{u}||}$$
 
-If the dot product of two vectors returns $0$, they are **orthogonal**, meaning the angle in between them is $\frac{\pi}{2}$ or $90\degree$.
+If the dot product of two vectors returns $0$, they are **orthogonal**, meaning the angle in between them is $\frac{\pi}{2}$ or $90\degree$ (perpendicular).
 
 ### Module
 
@@ -179,3 +180,11 @@ kv_{z} + hu_{z} + jo_{z} = w_{z}
 $$
 
 sum is always non parallel to each of the vectors and a LC of $h=1, j=1, k=1, \dots=1$
+
+#### $x$ present in vector definition
+
+1. Linear systems equation with rows not containing $x$
+2. For [[#Dependency|LD]]: use the value obtained from using $h,k$
+3. For [[#Dependency|LI]]: use any value $\ne$ from value obtained from using $h,k$ 
+
+### TODO: Find $\alpha$ of two vecs
