@@ -103,6 +103,21 @@ Contents from `file.txt` are read by the shell and passed to the program via `st
 cat < file.txt
 ```
 
+#### When piping
+
+When using `|` each pipe element can specify a redirection of any/all streams.
+
+```bash
+# ls errors are sent to `ls_errs.log` while grep errors are sent to `grep_errs.log`. Pipe acts as per usual.
+ls -l /path 2>ls_errs.log | grep pattern 2>grep_errs.log
+```
+
+[[🚨]] This will **short-circuit** the data flow!
+
+```bash
+# tree's `stdout` will be diverted to `tree.log` resulting in grep not receiving the data through piping.
+tree /home >tree.log | grep pattern
+```
 ## Conditional run
 
 `&&`: continue only if previous command was successful, otherwise stop.
