@@ -2,9 +2,9 @@
 tags:
   - digitec
   - draft
+  - todo
 lang:
   - en
-todo: true
 ---
 
 Measured in $Volts$.

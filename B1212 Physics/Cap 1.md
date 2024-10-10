@@ -2,10 +2,10 @@
 tags:
   - physics
   - draft
+  - todo
 lang:
   - en
   - it
-todo: true
 ---
 
 ## La fisica e le leggi della natura

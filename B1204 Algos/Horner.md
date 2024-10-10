@@ -1,9 +1,9 @@
 ---
 tags:
   - algos
+  - todo
 lang:
   - en
-todo: true
 ---
 
 ## Conversions
