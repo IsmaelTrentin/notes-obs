@@ -118,6 +118,15 @@ echo "f1;f2" | tr ';' ' '
 #> f1 f2
 ```
 
+```bash
+# | -> \whitespace
+# = -> :
+# a_n -> b_n
+# ... -> ...
+echo "f=a|f2=b" | tr '|=' ' :'
+# > f:a f2:b
+```
+
 ## `tee`
 
 Duplicates `stdin` to `stdout` and specified file.
@@ -133,3 +142,21 @@ seq 1 100 | grep 8 | tee /dev/stderr
 
 Prints current date time to `stdout`
 
+
+## `stat`
+
+Shows permission stats.
+
+```bash
+stat file.ext
+
+#   File: <filename>
+#   Size: <bytes>    Blocks: <n>    IO Block: <bytes>    <f_type>
+# Device: ...
+# Access: (<octal_perm>/<f_type><ugo>)    Uid: <user_id>    Gid: <group_id>
+# Access: 2024-10-10 10:23:31.502996705 +0200
+# Modify: 2024-10-03 10:27:34.060522655 +0200
+# Change: 2024-10-03 10:27:34.060522655 +0200
+#  Birth: 2024-09-26 10:45:31.049602148 +0200
+# <yyyy-MM-dd> <hh:mm:ss.ms> 
+```
