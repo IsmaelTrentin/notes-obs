@@ -4,7 +4,6 @@ tags:
   - draft
   - todo
 lang:
-  - en
   - it
 ---
 

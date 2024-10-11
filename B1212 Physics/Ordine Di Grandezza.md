@@ -1,7 +1,6 @@
 ---
 tags:
   - physics
-def: 
 lang:
   - it
 ---

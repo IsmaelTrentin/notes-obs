@@ -1,6 +1,7 @@
 ---
 tags:
   - precalculus
+  - needs-review
 lang:
   - en
 ---
@@ -19,6 +20,7 @@ $$m_{f} \cdot m_{g} = -1$$The two lines are **perpendicular**.
 $$q = f(0)$$
 
 The variable $q$ is responsible for the vertical translation of the graph.
+
 ### Horizontal Lines
 
 $$x=a$$
