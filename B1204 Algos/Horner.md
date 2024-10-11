@@ -8,7 +8,7 @@ lang:
 
 ## Conversions
 
-If $b_{t}$ is a power of $b_{s}$, target digits may be coupled 2 by 2.
+If $b_{t}$ is a power of $b_{s}$, target digits may be coupled by the power of $b_s$ to $b_t$.
 
 ### [[🔎]] Examples
 
