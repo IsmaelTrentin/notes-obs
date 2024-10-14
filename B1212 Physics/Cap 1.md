@@ -52,7 +52,7 @@ $c = 4 + 1 = 5$
 
 ## Conversione di unità di misura
 
-[[Conversions]]
+[[Conversioni]]
 
 ## Errori di misura e operazioni di media
 
