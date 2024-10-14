@@ -2,7 +2,7 @@
 tags:
   - physics
 lang:
-  - en
+  - it
 ---
 
 $$\begin{alignat*}{1}
