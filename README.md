@@ -1,15 +1,8 @@
----
-tags:
-  - todo
----
+All Y1 courses notes.
 
-# Notes repo
-
-## Modules
-
-- [[precalculus.index]]
-- [[linear_algebra.index]]
-- [[algos.index]]
-- [[physics.index]]
-- [[digitec.index]]
-- [[env.index]]
+[[precalculus.index|B1201 Precalculus]]
+[[linear_algebra.index|B1202 Linear Algebra]]
+[[algos.index|B1204 Algos]]
+[[physics.index|B1212 Physics]]
+[[digitec.index|E1204 DigiTec]]
+[[env.index|I1206 Envs]]
