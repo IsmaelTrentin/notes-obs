@@ -1,8 +1,18 @@
 ---
 tags:
   - index
-last-edited: 2024-10-03
+  - todo
+last-edited: 2024-10-14
 ---
 
-[[Lines]]
+## Sources
+
 [[Absolute Value]]
+[[Lines]]
+todo: curves
+todo: functions
+todo: polynomials 
+
+## Chapters
+
+![[Lines]]
