@@ -5,6 +5,10 @@ lang:
   - en
 ---
 
+## Permissions on Linux
+
+
+
 ## UGO
 
 ### `--- user`
