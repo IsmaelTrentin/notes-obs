@@ -160,3 +160,41 @@ stat file.ext
 #  Birth: 2024-09-26 10:45:31.049602148 +0200
 # <yyyy-MM-dd> <hh:mm:ss.ms> 
 ```
+
+## `whoami`
+
+Prints current user username.
+
+```bash
+whoami
+# ismael.trentin@supsi.ch
+```
+
+## `groups`
+
+Prints current user groups.
+
+```bash
+groups
+# student blah blahblah
+```
+
+## `chmod`
+
+To change perms for all files in a directory use recursive mode with `-R`.
+
+Symbolic absolute
+
+```bash
+# all perms to owner and group member, no perms to other users.
+chmod ug=rwx,o=--- file
+```
+
+> removing perms is achieved by omitting them, meaning just `o=` is also valid.
+
+Symbolic relative
+
+```bash
+# revoke write perms to group members and grant read perms to other users.
+chmod g-w,o+r file
+```
