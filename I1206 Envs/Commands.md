@@ -167,7 +167,7 @@ Prints current user username.
 
 ```bash
 whoami
-# ismael.trentin@supsi.ch
+# username@doma.in
 ```
 
 ## `groups`
