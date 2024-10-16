@@ -1,7 +1,6 @@
 ---
 tags:
   - precalculus
-  - needs-review
 lang:
   - en
 ---
