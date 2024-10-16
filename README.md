@@ -1,4 +1,7 @@
-All Y1 courses notes.
+
+This repo is used to collect all my notes taken with [Obsidian](https://obsidian.md/) during my studies at SUPSI DTI.
+
+## Y1 Classes
 
 [[precalculus.index|B1201 Precalculus]]
 [[linear_algebra.index|B1202 Linear Algebra]]
