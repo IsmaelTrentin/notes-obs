@@ -183,7 +183,7 @@ groups
 
 To change perms for all files in a directory use recursive mode with `-R`.
 
-Symbolic absolute
+### Symbolic absolute
 
 ```bash
 # all perms to owner and group member, no perms to other users.
@@ -192,7 +192,7 @@ chmod ug=rwx,o=--- file
 
 > removing perms is achieved by omitting them, meaning just `o=` is also valid.
 
-Symbolic relative
+### Symbolic relative
 
 ```bash
 # revoke write perms to group members and grant read perms to other users.
@@ -204,3 +204,52 @@ Absolute and relative can be used at the same time:
 ```bash
 chmod g=rwx,o+r,g-wx file
 ```
+
+### Octal
+
+See [[Permissions#Octal form]].
+
+```bash
+# ugo=rwxr-----
+chmod 740 file
+```
+
+### setgid
+
+On files, **setgid** allows the file to be executed with the `gid` of the file's group, rather than the group of the user executing the file.
+
+On directories, the **setgid** causes files created within the directory to inherit the directory's group rather than the primary group of the user who created the file.
+
+```bash
+# exec file using parent gid and not the executor gid
+chmod g+s executable_file
+```
+
+```bash
+# all files in dir will have parent dir gid
+chmod g+s dir
+```
+
+## `chgrp`
+
+Changes file's permissions group.
+
+```bash
+chgrp groupname file
+```
+
+> Only groups for which you are a member of can be used, an error will be returned otherwise.
+
+## `newgrp`
+
+Starts a new shell and sets the specified group as the main group.
+
+```bash
+groups
+# > main b c
+
+newgrp c
+# > c main b
+```
+
+> Only groups for which you are a member of can be used, an error will be returned otherwise.
