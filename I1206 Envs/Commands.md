@@ -62,7 +62,7 @@ Common args:
 
 ```bash
 # find files ending with `.jpg` and copy them one by one to `/destination`
-find / -name '*.jpg' -exec copy {} /destination \;
+find / -name '*.jpg' -exec cp {} /destination \;
 ```
 
 ## `sort`
@@ -197,4 +197,10 @@ Symbolic relative
 ```bash
 # revoke write perms to group members and grant read perms to other users.
 chmod g-w,o+r file
+```
+
+Absolute and relative can be used at the same time:
+
+```bash
+chmod g=rwx,o+r,g-wx file
 ```
