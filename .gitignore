@@ -1,11 +1,10 @@
-# Ignore everything
-*
+.data
+supsilinux.sh
 
-!.gitignore
+.pdf
+.odt
+.xls
 
-# Do not ignore directories, so that we can traverse them to find .md files
-!*/
-
-# Do not ignore .md files anywhere (in root and subdirectories)
-!*.md
-
+.DS_STORE
+.trash
+.obsidian
