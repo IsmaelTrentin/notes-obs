@@ -1,9 +1,11 @@
 .data
 supsilinux.sh
 
-.pdf
-.odt
-.xls
+"I1202 Coding Lab"
+
+*.pdf
+*.odt
+*.xls
 
 .DS_STORE
 .trash
