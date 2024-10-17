@@ -10,4 +10,4 @@ This repo is used to collect all my notes taken with [Obsidian](https://obsidian
 [[digitec.index|E1204 DigiTec]]
 [[env.index|I1206 Envs]]
 
-![[graph.png]]
+![graph](./graph.png)
