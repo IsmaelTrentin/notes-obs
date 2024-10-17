@@ -1,7 +1,8 @@
+# 🎓 Notes
 
 This repo collects all my notes taken with [Obsidian](https://obsidian.md/) during my studies at SUPSI DTI. The majority are written in English except for Physics which is in Italian.
 
-## Y1 Classes
+## 💫 Y1 Classes
 
 - [B1201 Precalculus](./B1201%20Precalculus/precalculus.index.md)
 - [B1202 Linear Algebra](./B1202%20Linear%20Algebra/linear_algebra.index.md)
@@ -12,4 +13,4 @@ This repo collects all my notes taken with [Obsidian](https://obsidian.md/) duri
 
 ![graph](./graph.png)
 
-> last updated: `17.10.2024@22:00`
+> graph last updated: `17.10.2024@22:00`
