@@ -27,7 +27,7 @@ The distance from $A$ to $B$ is the [[Vectors#Module|module]] of $\vec{AB}$.
 
 Polar coordinates are defined using a radius $r$ and an angle $\alpha$. The point is the intersection between the [[Lines|line]] traced from the origin with angle $\alpha$ and the circle of radius $r$.
 
-![polar coords](_cdn/linear_algebra/polar_coords.jpeg)
+![polar coords](../_cdn/linear_algebra/polar_coords.jpeg)
 
 ### Cartesian
 
