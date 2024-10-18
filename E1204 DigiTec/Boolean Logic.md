@@ -28,4 +28,4 @@ $$Y = F(A,B) = (A+B)(\overline{A}+B) = \prod_{}^{}(0,3)$$
 
 ## Axioms
 
-![axioms](_cdn/digitec/boolean_axioms.png)
+![axioms](../_cdn/digitec/boolean_axioms.png)
