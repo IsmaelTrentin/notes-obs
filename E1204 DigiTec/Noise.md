@@ -2,7 +2,6 @@
 tags:
   - digitec
   - draft
-  - todo
 lang:
   - en
 ---

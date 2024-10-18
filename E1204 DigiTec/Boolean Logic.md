@@ -2,7 +2,6 @@
 tags:
   - digitec
   - draft
-  - todo
 lang:
   - en
 ---
@@ -27,5 +26,6 @@ Example:
 
 $$Y = F(A,B) = (A+B)(\overline{A}+B) = \prod_{}^{}(0,3)$$
 
-TODO:
-tabella axioms
+## Axioms
+
+![axioms](_cdn/digitec/boolean_axioms.png)

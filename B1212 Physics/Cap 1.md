@@ -2,7 +2,6 @@
 tags:
   - physics
   - draft
-  - todo
 lang:
   - it
 ---
