@@ -88,36 +88,37 @@ $$\{ 2^{-1}, 2^{-2}, \dots \} = \left\{  \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, 
 
 Applying this concept to the algorithm we get:
 
-$$H = \left( \left( \left( d_{0} \cdot \frac{1}{b} + d_{1} \right) \cdot \frac{1}{b} + d_{2} \right) \cdot \dots \right) \cdot \frac{1}{b} + d_{N}$$
+$$H = \left( \left( \left( d_{0} \cdot b^{-1} + d_{1} \right) \cdot b^{-1} + d_{2} \right) \dots \right) \cdot b^{-1} + d_{N}$$
 
 Where $N$ is the number of digits after the decimal point and $d_{0}$ is the first digit after the decimal point.
 
-> [[👁️]] it is $\frac{1}{b}$ and not $b^{-i}$ because normal Horner is $(\dots)\cdot b$ and not $(\dots) \cdot b^{i}$. Only the base $b$ is needed.
+Inverse definition:
+
+_see example below_.
 
 ### [[🔎]] Examples
 
 Given the number $k$:
-$$0.101_{2}$$
+$$k = 0.1101_{2}$$
 
-[[🚨]] Starting from the **right**:
+[[🚨]] Starting from the **right** ($MSB$):
 
-$$\begin{alignat*}{1}
-1 \cdot \frac{1}{2} + 0 &= 0.5 \\
-0.5 \cdot \frac{1}{2} + 1 &= 1.5 \\
-1.5 \cdot \frac{1}{2} + 0 &= 0.625 
-\end{alignat*}$$
+$$H(k) = \left(\left(\left( 1 \cdot \frac{1}{2} + 0\right) \cdot \frac{1}{2} + 1\right) \cdot \frac{1}{2} + 1\right) \cdot \frac{1}{2} + 0 = 0.8125_{10}$$
 
 The inverse algorithm is defined as so:
 
 $$\begin{alignat}{2}
-int(0.625 \cdot 2) &= 1 &MSB \\
+int(0.8125 \cdot 2) &= 1 &LSB \\
+int(0.625 \cdot 2) &= 1 \\
 int(0.25 \cdot 2) &= 0 \\
-int(0.5 \cdot 2) &= 1 &LSB \\
+int(0.5 \cdot 2) &= 1 &MSB \\
 int(0) &\implies end \\
-&0.101_{2}
+H^{-1}(0.8125) &= 0.1101_{2}
 \end{alignat}$$
 
 where $int$ is a function that returns the integral part of a number in $\mathbb{R}$.
 
-> [[👁️]] unlike [[#In $ mathbb{Z}$ with 2's complement|Horner]] in $\mathbb{Z}$, one more step is required at the end for both normal and inverted
+> [[👁️]] $LSB$ is the first digit right after the decimal point, while $MSB$ is $b^{-N-1}$
+
+> [[🚨]] unlike [[#In $ mathbb{Z}$ with 2's complement|Horner]] in $\mathbb{Z}$, one more step is required at the end for both normal and inverted
 
