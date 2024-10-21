@@ -1,7 +1,7 @@
 ---
 tags:
   - index
-last-edited: 2024-10-17
+last-edited: 2024-10-21
 ---
 
 ## Sources
@@ -10,9 +10,10 @@ last-edited: 2024-10-17
 [[Ordine Di Grandezza]]
 [[Conversioni]]
 [[Moto Rettilineo Uniforme]]
-[[Moto Uniformemente Accelerato]]
+[[Moto Rettilineo Uniformemente Accelerato]]
 [[Caduta Libera]]
 [[Moto 2D]]
+[[Moto Del Proiettile]]
 ## Chapters
 
 ### Cinematica 1D
@@ -22,3 +23,7 @@ last-edited: 2024-10-17
 ### Vettori
 
 ![[Vectors]]
+
+### Moto 2D
+
+![[Moto 2D]]

@@ -26,3 +26,6 @@ $$v_{y} = v_{0_{y}} + a_{y}t$$
 $$v_{x}^2 = v_{0_{x}}^2 + 2a_{x}\Delta{x}$$
 
 $$v_{y}^2 = v_{0_{y}}^2 + 2a_{y}\Delta{y}$$
+## Applicazioni
+
+![[Moto Del Proiettile]]

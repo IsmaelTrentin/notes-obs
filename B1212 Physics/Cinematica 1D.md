@@ -45,6 +45,6 @@ $$a = \lim_{ \Delta{t} \to 0 } \frac{\Delta{v}}{\Delta{t}}$$
 
 ![[Moto Rettilineo Uniforme]]
 
-![[Moto Uniformemente Accelerato]]
+![[Moto Rettilineo Uniformemente Accelerato]]
 
 ![[Caduta Libera]]
