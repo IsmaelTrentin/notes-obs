@@ -122,3 +122,30 @@ where $int$ is a function that returns the integral part of a number in $\mathbb
 
 > [[🚨]] unlike [[#In $ mathbb{Z}$ with 2's complement|Horner]] in $\mathbb{Z}$, one more step is required at the end for both normal and inverted
 
+## In $\mathbb{R}$
+
+To represent real numbers, machines need to approximate. In this set, [[2's Complement]] is not defined, hence not used.
+
+Representation error:
+
+$$\text{rounding} \lt \frac{x'_{m} - x_{m}}{2}$$
+
+where $x_m$ is a machine number, meaning a number in $\mathbb{R}$ representable with no error by a machine, and $x'_m$ the next available machine number.
+
+It is better to have an independent $\epsilon_{r}$. Lower numbers will have a much lower $\epsilon_{r}$ than big numbers. This is because the bigger the number the lower the $\epsilon_{r}$.
+
+REFAC:
+picture
+
+1 bit sign
+8 bit exp BIG ENDIAN
+23 bit mantissa BIG ENDIAN
+
+horner:
+read the 8 bits and subtract 127
+mantissa implies decimal point after the first digit $LSB + 1$ 
+total=sign . mantissa . 2\^exp
+
+inv horner:
+left-> inv horner N, right-> inv horner Q
+to IEE 755 -> NORMALIZE MANTISSA (1.xxxx and compensate exp)

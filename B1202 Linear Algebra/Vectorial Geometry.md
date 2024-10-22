@@ -178,3 +178,4 @@ Similar to $\mathbb{R}^3$, $x$ (basically being the [[Vectors#Module|module]] of
 ## Ortho-normal Ternary
 
 It is defined as 3 [[Vectors]] all orthogonal to each other and all with [[Vectors#Versor|module]] `1`.
+

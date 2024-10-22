@@ -52,3 +52,37 @@ and so on...
 Each true bit represents if each single permission is granted or not. So `7` being `111` represents `rwx` meaning all permissions are granted. `3` would be `011` meaning `-wx`.
 
 [[🚨]] Octal digits are read from LtR, missing digits are interpreted as `0`s, meaning that a single number applies permissions only to _others_: `7` => `007` => `------rwx`.
+
+### REFAC: Special Permissions
+
+#### setuserid
+
+usually su file
+
+permette exec con l'user id specificato (esegui come X)
+
+`s`: exec + setuid
+`S`: only setuid (really weird situation)
+
+#### setgid
+
+usually su dirs
+
+See [[Commands#setgid]].
+
+group third slot values:
+`s`: exec + setgid
+`S`: only setgid
+
+in ottale -> 2777 -> `010` `111` `111` `111`. sets setgid bit to 1
+
+#### sticky
+
+usually su dirs
+
+ allows only the dir owner or file owner to delete a file/dir
+
+`t`: exec + sticky
+`T`: only sticky
+
+toglie il permesso di cancellare i file agli altri utenti per i file contenuti nella cartella dove e' stato applicato il permesso
