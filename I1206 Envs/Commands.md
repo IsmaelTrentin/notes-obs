@@ -98,6 +98,14 @@ less bigtext.txt
 cat text.txt | less
 ```
 
+## `zless`
+
+Same as [[#`less`]] but is used with compressed files.
+
+```bash
+zless file.blah.gz
+```
+
 ## `cut`
 
 `-d`: delimiter character
@@ -214,11 +222,17 @@ See [[Permissions#Octal form]].
 chmod 740 file
 ```
 
+### setuid
+
+See [[Permissions#setuid]]
+
+```bash
+# exec file using parent gid and not the executor gid
+chmod g+s executable_file
+```
 ### setgid
 
-On files, **setgid** allows the file to be executed with the `gid` of the file's group, rather than the group of the user executing the file.
-
-On directories, the **setgid** causes files created within the directory to inherit the directory's group rather than the primary group of the user who created the file.
+See [[Permissions#setgid]]
 
 ```bash
 # exec file using parent gid and not the executor gid
@@ -253,3 +267,63 @@ newgrp c
 ```
 
 > Only groups for which you are a member of can be used, an error will be returned otherwise.
+
+## `\time`
+
+Benchmark command execution.
+
+```bash
+\time <cmd>
+```
+
+## `top`
+
+In-shell activity monitor.
+
+```bash
+top
+```
+
+## `ps`
+
+Shows current terminal processes.
+
+```bash
+ps
+```
+
+### `ps aux`
+
+Shows all processes current status.
+
+```bash
+ps aux
+```
+
+## `split`
+
+Split file contents in 2 files.
+
+```bash
+# creates two files (xaa, xab) of 250 lines each
+split -l 250 file_of_500_lines.txt
+```
+
+## `parallel`
+
+Build and execute shell command lines from stdin in parallel. Basically split workload between CPUs.
+
+Key Options:
+
+- `-j N`: Number of jobs to run in parallel.
+- `--dry-run`: Prints the commands that would be executed, without running them.
+- `--bar`: Shows a progress bar for the jobs.
+
+```bash
+# the `:::` is the delimiter used to separate the command from the arguments
+parallel echo ::: A B C ::: X Y Z
+
+# > A X
+# > B Y
+# > C Z
+```

@@ -53,36 +53,41 @@ Each true bit represents if each single permission is granted or not. So `7` bei
 
 [[🚨]] Octal digits are read from LtR, missing digits are interpreted as `0`s, meaning that a single number applies permissions only to _others_: `7` => `007` => `------rwx`.
 
-### REFAC: Special Permissions
+### Special Permissions
 
-#### setuserid
+Special permissions take care of edge cases where normal permissions cannot.
 
-usually su file
+### Octal
 
-permette exec con l'user id specificato (esegui come X)
+The first slot in the octal digits, composed of three bits, is the one dedicated to the special permissions. Each bit represents the special permission state in the same order as [[#UGO]], meaning the MSB is responsible for the owner, the middle one for the group and the LSB for others.
 
-`s`: exec + setuid
-`S`: only setuid (really weird situation)
+Examples:
+
+`2777`: `010` `111` `111` `111`, sets the setgid bit to `1`
+`4777`: `100` `111` `111` `111`, sets the setuid bit to `1`
+
+#### setuid
+
+This permissions is typically used on files and it enables the users to execute a file as if they were the user specified by the provided userid. Basically a 'run as X'.
+
+In the user UGO field:
+`s`: execution + setuid permissions
+`S`: only setuid permission. Ambiguous and potentially wrong situation, should be avoided.
 
 #### setgid
 
-usually su dirs
+On directories, the **setgid** causes files created within the directory to inherit the directory's group rather than the primary group of the user who created the file.
 
-See [[Commands#setgid]].
+On files, **setgid** allows the file to be executed with the `gid` of the file's group, rather than the group of the user executing the file.
 
-group third slot values:
-`s`: exec + setgid
-`S`: only setgid
-
-in ottale -> 2777 -> `010` `111` `111` `111`. sets setgid bit to 1
+In the group UGO field:
+`s`: execution + setgid permissions
+`S`: only setgid permission. Ambiguous and potentially wrong situation, should be avoided.
 
 #### sticky
 
-usually su dirs
+It is applied on directories and allows only the directory owner to delete entries, revoking this permissions to any other user.
 
- allows only the dir owner or file owner to delete a file/dir
+`t`: execution + sticky permissions
+`T`: only sticky permission.
 
-`t`: exec + sticky
-`T`: only sticky
-
-toglie il permesso di cancellare i file agli altri utenti per i file contenuti nella cartella dove e' stato applicato il permesso
