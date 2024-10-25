@@ -175,6 +175,46 @@ Similar to $\mathbb{R}^3$, $x$ (basically being the [[Vectors#Module|module]] of
 - if $x < 0 \text{ or } A < 0 \implies$ clockwise
 - if $x = 0 \text{ or } A = 0 \implies$ the point is on the vector / vectors are [[Vectors#Dependency|LD]].
 
+## Triple Product in Vectorial Geometry
+
+The [[Vectors#Triple Product|Triple Product]] has a variety of uses in vectorial geometry.
+
+### Volume
+
+The triple product is used to calculate the **volume** of the parallelepiped defined by $\vec{a}, \vec{b}, \vec{c}$.
+
+### Are 3 vectors LI?
+
+Given three vectors, check if they are [[Vectors#Dependency|LI]].
+
+If the [[Vectors#Triple Product|Triple Product]] returns `0` they are **not** linearly dependent, otherwise they are.
+
+### DX or SX Ternary?
+
+If the [[Vectors#Triple Product|Triple Product]] is $> 0$ it is **DX**.
+If the [[Vectors#Triple Product|Triple Product]] is $< 0$ it is **SX**.
+
+### Find $H$ projection of $P$  onto plane $ABC$ in $\mathbb{R}^3$
+
+
+H = P + PH
+where PH = KA = -AK where K is the projection of P onto (AB cross AC)
+
+height parallelepiped = abs(AB cross AC dot AP) / norm(AB cross AC)
+
+points counter-clockwise -> triple prod > 0
+points clockwise -> triple prod < 0
+
+Ese complanarita:
+- are three points aligned? cross prod = 0 -> yes, cross prod != 0 -> no
+- given three points, find a fourth that is on the same plane: A + kAB + kAC
+- find CL to get null vec -> eq system with kAB_x+jAC_x+hAD_x=0 ...
+- prove that these four points are complanari -> triple product = 0 aka AB cross AC dot AD
+
+Distanze
+dist P da A: sqrt(vecAP dot vecAP)
+...
+CHECK SLIDES!!!!!!!!!!
 ## Ortho-normal Ternary
 
 It is defined as 3 [[Vectors]] all orthogonal to each other and all with [[Vectors#Versor|module]] `1`.
