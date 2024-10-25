@@ -30,5 +30,5 @@ $$Y = F(A,B) = (A+B)(\overline{A}+B) = \prod_{}^{}(0,3)$$
 
 ![axioms](../_cdn/digitec/boolean_axioms.png)
 
-REFAC:
-Shannon 1: if x in f(x) is negated, then it becomes !0 which is 1
+> [[🚨]] **Shannon 1**: if $x$ inside $f$ is $\overline{x}$, then it becomes $\overline{0}$ which is $1$
+
