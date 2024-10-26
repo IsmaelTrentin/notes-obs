@@ -241,7 +241,7 @@ $$\frac{1}{||x||}\vec{x}$$
 
 $$\left| \left| \frac{k}{||v||} \cdot v \right| \right| = |k|$$
 
-## [[physics.index|Physics]]
+## [[_physics.index|Physics]]
 
 $$\theta = \tan^{-1} \frac{\vec{a}_{y}}{\vec{a}_{x}}$$
 

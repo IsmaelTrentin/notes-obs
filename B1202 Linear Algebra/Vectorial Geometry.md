@@ -105,7 +105,7 @@ The distance from the **origin point** to the projected point is:
 
 $$||ka|| = ||\vec{b}|| \cdot \cos \alpha$$
 
-> in [[physics.index|physics]] this is the $x$ component
+> in [[_physics.index|physics]] this is the $x$ component
 
 The [[Vectors#Module|module]] of $\vec{PH}$ can also be defined as:
 
@@ -115,7 +115,7 @@ $$||\vec{PH}|| = ||\vec{b}|| \cdot \sin \alpha= \frac{|\vec{b} \times \vec{a}|}{
 
 > this module is actually derived from the vector parallel to $\vec{PH}$
 
-> in [[physics.index|physics]] this is the $y$ component
+> in [[_physics.index|physics]] this is the $y$ component
 
 
 ## Cross Product in Vectorial Geometry
