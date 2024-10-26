@@ -1,19 +1,27 @@
 ---
 tags:
   - index
-last-edited: 2024-10-25
+last-edited: 2024-10-26
 ---
 
 ## Sources
 
+[[The 3 y's]]
 [[Bits]]
 [[2's Complement]]
 [[Logic Gates]]
 [[Noise]]
+[[Logic Families]]
+[[Transistors]]
 [[Consumption]]
 [[Boolean Logic]]
 [[Karnaugh's Maps]]
+[[Quine McClusky]]
 ## Chapters
+
+### Intro
+
+![[The 3 y's]]
 
 ### 2's Complement
 
@@ -27,6 +35,14 @@ last-edited: 2024-10-25
 
 ![[Noise]]
 
+### Logic Families
+
+![[Logic Families]]
+
+### Transistors
+
+![[Transistors]]
+
 ### Consumption
 
 ![[Consumption]]
@@ -35,6 +51,8 @@ last-edited: 2024-10-25
 
 ![[Boolean Logic]]
 
-#### K-MAPS
+#### K-MAPS and McClusky
 
 ![[Karnaugh's Maps]]
+
+![[Quine McClusky]]
