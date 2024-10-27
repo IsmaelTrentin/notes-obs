@@ -15,6 +15,6 @@ last-edited: 2024-10-16
 
 ![[Vectors]]
 
-### [[Vectorial Geometry]]
+### Vectorial Geometry
 
 ![[Vectorial Geometry]]

@@ -17,21 +17,29 @@ Maxterms are exactly the opposite of [[#Minterms]]. **Unique** `OR` combinations
 
 Sum Of Products. Pick only the [[#Minterms]] that give a `true` $Y$.
 
-$$Y = \sum_{}^{}mi_{i}$$
+$$
+Y = \sum_{}^{}mi_{i}
+$$
 
 Example:
 
-$$Y = F(A,B) = \overline{A}B + AB = \sum_{}^{}(1,3)$$
+$$
+Y = F(A,B) = \overline{A}B + AB = \sum_{}^{}(1,3)
+$$
 
 ## POS Form
 
 Product of Sums. Pick only the [[#Maxterms]] that give a `false` $Y$.
 
-$$Y = \prod_{}^{}MI_{i}$$
+$$
+Y = \prod_{}^{}MI_{i}
+$$
 
 Example:
 
-$$Y = F(A,B) = (A+B)(\overline{A}+B) = \prod_{}^{}(0,3)$$
+$$
+Y = F(A,B) = (A+B)(\overline{A}+B) = \prod_{}^{}(0,3)
+$$
 
 ## Axioms
 

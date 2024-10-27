@@ -13,10 +13,12 @@ lang:
 
 Measured in $Volts$:
 
-$$\begin{align}
+$$
+\begin{align}
 NM_{H} &= V_{OH} - V_{IH} = \Delta V_{H}\\
 NM_{L} &= V_{IL} - V_{OL} \\
-\end{align} $$
+\end{align}
+$$
 
 ### Ideal vs. Real
 

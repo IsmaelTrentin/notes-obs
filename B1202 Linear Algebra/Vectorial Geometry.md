@@ -9,15 +9,19 @@ lang:
 
 [[Vectors]] can be built using points' coordinates. Given two points $A, B$ in $\mathbb{R}^3$, the vector $\vec{AB}$ can be built like so:
 
-$$\vec{AB} = \begin{bmatrix}
+$$
+\vec{AB} = \begin{bmatrix}
 B_{x} - A_{x} \\
 B_{y} - A_{y} \\
 B_{z} - A_{z} \\
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 To find the coordinates of point $C$, opposite of $B$ in symmetry to $A$, one can add vectors to points to reach the point's coordinates. Example:
 
-$$C = A - \vec{AB}$$
+$$
+C = A - \vec{AB}
+$$
 
 The distance from $A$ to $B$ is the [[Vectors#Module|module]] of $\vec{AB}$.
 
@@ -27,7 +31,7 @@ The distance from $A$ to $B$ is the [[Vectors#Module|module]] of $\vec{AB}$.
 
 Polar coordinates are defined using a radius $r$ and an angle $\alpha$. The point is the intersection between the [[Lines|line]] traced from the origin with angle $\alpha$ and the circle of radius $r$.
 
-![polar coords](../_cdn/linear_algebra/polar_coords.jpeg)
+![[polar_coords.jpeg]]
 
 ### Cartesian
 
@@ -37,11 +41,15 @@ I don't think I have to explain these...
 
 Polar to cartesian:
 
-$$(r, \alpha) \implies (r \cdot \cos \alpha, r \cdot \sin \alpha)$$
+$$
+(r, \alpha) \implies (r \cdot \cos \alpha, r \cdot \sin \alpha)
+$$
 
 Cartesian to polar:
 
-$$(x, y) \implies ( \sqrt{ x^2 + y^2 }, \pm \cos^{-1} \frac{x}{r} )$$
+$$
+(x, y) \implies ( \sqrt{ x^2 + y^2 }, \pm \cos^{-1} \frac{x}{r} )
+$$
 
 
 
@@ -49,13 +57,15 @@ $$(x, y) \implies ( \sqrt{ x^2 + y^2 }, \pm \cos^{-1} \frac{x}{r} )$$
 
 Having $\vec{x} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$:
 
-$$\begin{align}
+$$
+\begin{align}
 ||\vec{x}|| &= \sqrt{ 3^2 + 1^2 } = \sqrt{ 10 } \\
 \frac{1}{\sqrt{ 10 }} \cdot \vec{x} &= \begin{bmatrix}
 \frac{3}{\sqrt{ 10 }} \\
 \frac{1}{\sqrt{ 10 }}
 \end{bmatrix} \implies \sqrt{ 0.9 + 0.1 } = 1
-\end{align}$$
+\end{align}
+$$
 
 ---
 
@@ -63,7 +73,9 @@ Having a vector $\vec{v}$ with module $||\vec{v}|| = \sqrt{ 10 }$, change the mo
 
 [[🛠️]] The problem can be resolved using a versor:
 
-$$\left( \frac{1}{||\vec{v}||} \cdot k\right) \cdot \vec{v}$$
+$$
+\left( \frac{1}{||\vec{v}||} \cdot k\right) \cdot \vec{v}
+$$
 
 ## Secant
 
@@ -73,7 +85,9 @@ If both vectors have equal [[Vectors#Module|module]], then the secant is defined
 
 Otherwise, a [[Vectors#Versor|versor]] that satisfies $||\vec{v}|| = ||\vec{u}||$ needs to be used:
 
-$$k \cdot \vec{v} = \vec{x} : ||\vec{x}|| = ||\vec{u}||$$
+$$
+k \cdot \vec{v} = \vec{x} : ||\vec{x}|| = ||\vec{u}||
+$$
 
 ## Projection
 
@@ -81,15 +95,21 @@ $$k \cdot \vec{v} = \vec{x} : ||\vec{x}|| = ||\vec{u}||$$
 
 The projection [[Vectors|vector]] is the only vector that is orthogonal to the projection base and touches the endpoint of the vector you want to project:
 
-$$(\vec{b} - k\vec{a}) \cdot \vec{a} = 0$$
+$$
+(\vec{b} - k\vec{a}) \cdot \vec{a} = 0
+$$
 
 where $k$ is:
 
-$$k = \frac{\vec{b} \cdot \vec{a}}{\vec{a} \cdot \vec{a}}$$
+$$
+k = \frac{\vec{b} \cdot \vec{a}}{\vec{a} \cdot \vec{a}}
+$$
 
 defining the projection of $\vec{b}$ onto $\vec{a}$, being $b'$, as a [[Vectors#Linear Combination|LC]] of $\vec{a}$:
 
-$$pro(\vec{b}, \vec{a}) = \frac{\vec{b} \cdot \vec{a}}{\vec{a} \cdot \vec{a}} \cdot \vec{a}$$
+$$
+pro(\vec{b}, \vec{a}) = \frac{\vec{b} \cdot \vec{a}}{\vec{a} \cdot \vec{a}} \cdot \vec{a}
+$$
 
 ### Point on vector
 
@@ -99,17 +119,23 @@ Now $\vec{AB}$ being $\vec{a}$ and $\vec{AP}$ being $\vec{b}$:
 
 The vector starting from $P$ and ending at $H$ is defined as:
 
-$$\vec{PH} = pro(\vec{b}, \vec{a}) - \vec{b}$$
+$$
+\vec{PH} = pro(\vec{b}, \vec{a}) - \vec{b}
+$$
 
 The distance from the **origin point** to the projected point is:
 
-$$||ka|| = ||\vec{b}|| \cdot \cos \alpha$$
+$$
+||ka|| = ||\vec{b}|| \cdot \cos \alpha
+$$
 
 > in [[_physics.index|physics]] this is the $x$ component
 
 The [[Vectors#Module|module]] of $\vec{PH}$ can also be defined as:
 
-$$||\vec{PH}|| = ||\vec{b}|| \cdot \sin \alpha= \frac{|\vec{b} \times \vec{a}|}{||\vec{a}||}$$
+$$
+||\vec{PH}|| = ||\vec{b}|| \cdot \sin \alpha= \frac{|\vec{b} \times \vec{a}|}{||\vec{a}||}
+$$
 
 > in 2D the output vector of the cross product is interpreted as a scalar so the absolute value notation is more appropriate. In 3D it is $||\vec{b} \times \vec{a}||$.
 
@@ -128,7 +154,8 @@ The [[Vectors#Module|module]] of the result vector of the cross product returns 
 
 ### Quick algo. to build an orthogonal vector
 
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 x_{1} \\
 x_{2} \\
 x_{3}
@@ -138,7 +165,8 @@ x_{3}
 x_{2}x_{3} \\
 x_{1}x_{3} \\
 -2x_{1}x_{2}
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 ### Build a vector orthogonal to a plane $\mathbb{R}^3$
 
@@ -149,11 +177,15 @@ The result of the [[Vectors#Cross Product|Cross Product]] operation is a vector 
 
 The theorem is defined as:
 
-$$||\vec{u} \times \vec{v}|| = ||\vec{u}|| \cdot ||\vec{v}|| \cdot \sin \alpha$$
+$$
+||\vec{u} \times \vec{v}|| = ||\vec{u}|| \cdot ||\vec{v}|| \cdot \sin \alpha
+$$
 
 defining $\sin \alpha$ as:
 
-$$\sin \alpha = \frac{||\vec{u} \times \vec{v}||}{||\vec{u}|| \cdot ||\vec{v}||}$$
+$$
+\sin \alpha = \frac{||\vec{u} \times \vec{v}||}{||\vec{u}|| \cdot ||\vec{v}||}
+$$
 
 $\sin \alpha$ is the [[Vectors#Module|module]] of the [[#Point on vector|projection vector]] defining the height of the triangle generated by the two operands.
 
@@ -161,11 +193,13 @@ $\sin \alpha$ is the [[Vectors#Module|module]] of the [[#Point on vector|project
 
 [[👁️]] this operation can also be performed in $\mathbb{R}^2$. In this space, the vector returned by the cross product is treated like a scalar value since the result will be:
 
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 0 \\
 0 \\
 x
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 > in this case use $|\vec{v}|$ instead of $||\vec{v}||$ since it's more appropriate for the scalar context.
 
@@ -196,6 +230,7 @@ If the [[Vectors#Triple Product|Triple Product]] is $< 0$ it is **SX**.
 
 ### Find $H$ projection of $P$  onto plane $ABC$ in $\mathbb{R}^3$
 
+REFAC
 
 H = P + PH
 where PH = KA = -AK where K is the projection of P onto (AB cross AC)

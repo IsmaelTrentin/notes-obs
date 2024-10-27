@@ -13,14 +13,20 @@ lang:
 
 **`[13]`** con $v_{i}, x_{0} = 0$, posizione $x$ in funzione del tempo $t$:
 
-$$x = \frac{1}{2}gt^2$$
+$$
+x = \frac{1}{2}gt^2
+$$
 
 > vedi equazione [[Moto Rettilineo Uniformemente Accelerato#**`[11]`** $x$ in funzione di $t$|11]] per capire come mai $v_{i}, x_{0} = 0$
 
 **`[14]`** con $v_0, x_{0} = 0$, velocita' $v$ in funzione del tempo $t$:
 
-$$v = gt$$
+$$
+v = gt
+$$
 
 **`[15]`** con $v_0, x_{0} = 0$, velocita' $v$ in funzione della distanza percorsa $x$:
 
-$$v = \sqrt{ 2gx }$$
+$$
+v = \sqrt{ 2gx }
+$$

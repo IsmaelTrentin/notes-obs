@@ -7,9 +7,13 @@ lang:
 
 ## Dynamic
 
-$$P_{dynamic} = \frac{1}{2}C \cdot V_{DD}^2 \cdot f$$
+$$
+P_{dynamic} = \frac{1}{2}C \cdot V_{DD}^2 \cdot f
+$$
 
 ## Static
 
-$$P_{static} = I_{DD} \cdot V_{DD}$$
+$$
+P_{static} = I_{DD} \cdot V_{DD}
+$$
 
