@@ -223,34 +223,129 @@ Given three vectors, check if they are [[Vectors#Dependency|LI]].
 
 If the [[Vectors#Triple Product|Triple Product]] returns `0` they are **not** linearly dependent, otherwise they are.
 
-### DX or SX Ternary?
+### Orientation
 
-If the [[Vectors#Triple Product|Triple Product]] is $> 0$ it is **DX**.
-If the [[Vectors#Triple Product|Triple Product]] is $< 0$ it is **SX**.
+If the [[Vectors#Triple Product|Triple Product]] is $> 0$, the ternary is **DX** and the points are counter-clockwise.
+If the [[Vectors#Triple Product|Triple Product]] is $< 0$, the ternary is **SX** and the points are clockwise.
 
 ### Find $H$ projection of $P$  onto plane $ABC$ in $\mathbb{R}^3$
 
-REFAC
+The [[#Projection|projection]] $H$ can be viewed as:
 
-H = P + PH
-where PH = KA = -AK where K is the projection of P onto (AB cross AC)
+$$
+H = P + \vec{PH}
+$$
 
-height parallelepiped = abs(AB cross AC dot AP) / norm(AB cross AC)
+where:
 
-points counter-clockwise -> triple prod > 0
-points clockwise -> triple prod < 0
+$$
+\vec{PH} = \vec{KA} = -\vec{AK}
+$$
 
-Ese complanarita:
-- are three points aligned? cross prod = 0 -> yes, cross prod != 0 -> no
-- given three points, find a fourth that is on the same plane: A + kAB + kAC
-- find CL to get null vec -> eq system with kAB_x+jAC_x+hAD_x=0 ...
-- prove that these four points are complanari -> triple product = 0 aka AB cross AC dot AD
+where $K$ is the projection of $P$ onto $\vec{AB} \times \vec{AC}$.
 
-Distanze
-dist P da A: sqrt(vecAP dot vecAP)
-...
-CHECK SLIDES!!!!!!!!!!
+### Find height of parallelepiped
+
+$$
+h = \frac{|\vec{AB} \times \vec{AC} \cdot \vec{AP}|}{||\vec{AB} \times \vec{AC}||} = \frac{Volume}{A_{base}}
+$$
+
+### Coplanarity
+
+#### Are three points aligned? 
+
+ - $\vec{AB} \times \vec{AC} = 0 \implies yes$
+ - $\vec{AB} \times \vec{AC} \ne 0 \implies no$
+
+#### Given three points, find a fourth that is on the same plane: 
+
+$$
+A + k\vec{AB} + k\vec{AC}
+$$
+
+#### Find a [[Vectors#Linear Combination|LC]] to generate a null vector:
+
+System equation:
+
+$$
+kAB + jAC +hAD = 0
+$$
+
+#### Prove that these four points are coplanar
+
+$$
+\vec{AB} \times \vec{AC} \cdot \vec{AD} = 0
+$$
+
+### Distances
+
+Distance of point $P$ from point $A$:
+
+$$
+d = \sqrt{ \vec{AP} \cdot \vec{AP} } = ||\vec{AP}||
+$$
+
+Distance of point $P$ from [[#Lines|line]] $\vec{AB}$:
+
+$$
+d = \frac{||\vec{AB} \times \vec{AP}||}{|\vec{AB}|} = ||\vec{AP}|| \cdot \sin \alpha
+$$
+
+Distance of point $P$ from plane $ABC$:
+
+$$
+d = \frac{|\vec{AB} \times \vec{AC} \cdot \vec{AP}|}{||\vec{AB} \times \vec{AC}||}
+$$
+
 ## Ortho-normal Ternary
 
 It is defined as 3 [[Vectors]] all orthogonal to each other and all with [[Vectors#Versor|module]] `1`.
 
+## Lines
+
+A line is defined by a point and any vector:
+
+$$
+(x, y, z) = A + k\vec{v}
+$$
+
+or two points in space:
+
+$$
+(x, y, z) = A + k(B - A)
+$$
+
+### Parametric Equations
+
+To find if a point $P$ belongs to a line, a parametric equation can be used. This is similar to [[Vectors#Linear Combination|Linear Combination]].
+
+$$
+\begin{cases}
+x = A_{x} + t \cdot \vec{v_{x}} \\
+y = A_{y} + t \cdot \vec{v_{y}} \\
+z = A_{z} + t \cdot \vec{v_{z}} \\
+\end{cases}
+$$
+
+### [[🔎]] Examples
+
+Given:
+
+$$
+\begin{cases}
+x = 1 - t\\
+y = t - 1 \\
+z = 5 \\
+\end{cases}
+$$
+
+The parametric equation could be defined as:
+
+$$
+P(t) = (1, -1, 5) + t \cdot
+\begin{bmatrix}
+-1 \\
+1 \\
+0
+\end{bmatrix}
+$$
