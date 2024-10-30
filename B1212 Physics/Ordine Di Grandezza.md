@@ -16,10 +16,13 @@ Potenza di `10` piu' vicina ad esso.
 ## [[🔎]] Esempi
 
 $$
-a=4825
-$$$$
-b=4.825*10^3
+a = 4825
 $$
+
+$$
+b=4.825 \cdot 10^3
+$$
+
 $$
 b<5 \Rightarrow ODG=3
 $$
