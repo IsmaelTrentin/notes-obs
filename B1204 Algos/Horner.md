@@ -231,13 +231,31 @@ Absolute and relative error:
 $$
 \begin{align}
 \epsilon_{a} &= |x_{m} - n| \\
-\epsilon_{r} &= \frac{|x_{m} - n|}{x_{m}}
+\epsilon_{r} &= \frac{\epsilon_a}{|n|}
 \end{align}
 $$
 
 where $n$ is the real number with **no approximation**.
 
 It is better to have an independent $\epsilon_{r}$. Lower numbers will have a much lower $\epsilon_{r}$ than big numbers. This is because the bigger the number the lower the $\epsilon_{r}$.
+
+> [[🛠️]] $x_m$ is the re-conversion in base ten from the bits obtained when applying Horner to $n$. If $n$ is not a machine number, they will be slightly different. That is the absolute error.
+
+refac
+absolut error approx way:
+0.overflown bits from mantissa \* 2 ^ exp - 23 
+
+for relative
+ea/|x| < 2^p-23/|x| < 2^-23
+check slides with formulae
+-> -1 implies division by two because when using approx the max error will always be half the size of the truncated one
+
+approx:
+when 24th' bit is 1The  -> +1
+when 24th' bit is 0 -> unchanged
+
+denormalized mantissa is like working with less bits. it is dangerous 
+
 
 ### IEEE 754 Float
 
@@ -255,3 +273,12 @@ It is better to have an independent $\epsilon_{r}$. Lower numbers will have a mu
 - [[#From base $10$ to $b$|Inv. Horner in N]] the integral part 
 - [[#In $ mathbb{Q}$|Inv. Horner in Q]] the fractional part
 - Normalize mantissa (1.mantissa_bits) and compensate exponent
+
+### Exceptions
+
+refac
+when exp bits all 0 -> mantissa is 0.bits and exp value switches to 2^-126
+
+not a machine number when bits needed to represent the number overflow the dedicated mantissa space (machine number have a)
+
+absolute error approx
