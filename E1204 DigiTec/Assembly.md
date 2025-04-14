@@ -1,7 +1,0 @@
----
-tags:
-  - digitec
-lang:
-  - en
----
-

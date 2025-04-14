@@ -1,8 +1,0 @@
----
-tags:
-  - index
----
-
-## Sources
-
-## Chapters
