@@ -25,6 +25,19 @@ $$
 
 The distance from $A$ to $B$ is the [[Vectors#Module|module]] of $\vec{AB}$.
 
+### Is P inside ABC?
+
+To check if a point $P$ is inside a triangle of points $A,B,C$. build $\vec{AB}, \vec{AC}, \vec{AP}$. Having:
+
+$$
+\vec{AP} = h\vec{AB} + k\vec{AC}
+$$
+
+$h > 0$
+$k > 0$
+$h + k < 1$
+
+> if $h+k=1$ then $P$ is exactly on the border
 ## Coordinates
 
 ### Polar 
@@ -306,13 +319,13 @@ It is defined as 3 [[Vectors]] all orthogonal to each other and all with [[Vecto
 A line is defined by a point and any vector:
 
 $$
-(x, y, z) = A + k\vec{v}
+(x, y, z) = A + \lambda \vec{v}
 $$
 
 or two points in space:
 
 $$
-(x, y, z) = A + k(B - A)
+(x, y, z) = A + \lambda(B - A)
 $$
 
 ### Parametric Equations
@@ -321,11 +334,54 @@ To find if a point $P$ belongs to a line, a parametric equation can be used. Thi
 
 $$
 \begin{cases}
-x = A_{x} + t \cdot \vec{v_{x}} \\
-y = A_{y} + t \cdot \vec{v_{y}} \\
-z = A_{z} + t \cdot \vec{v_{z}} \\
+x = A_{x} + \lambda \cdot \vec{v_{x}} \\
+y = A_{y} + \lambda \cdot \vec{v_{y}} \\
+z = A_{z} + \lambda \cdot \vec{v_{z}} \\
 \end{cases}
 $$
+
+```desmos-graph
+(0,0)|label:A
+(5,5)|label:B
+f(x)=x|x>0|x<5
+
+f(x)=x|x>0|x<2.5|green
+(2.5,2.5)|green|label:λ=0.5
+
+f(x)=x|x>-5|x<0|red
+(-5,-5)|red|label:B' λ=-1
+```
+
+[[🛠️]] To check if a point is on a line you solve the equations system for $x,y,z$  substituting them with the point coordinates.
+
+### Line Positions
+
+| Mutual Positions | Geometric Condition                                       | Algebraic Condition                                                               |
+| ---------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| coinciding       | $(\vec{u}~\parallel~\vec{v})~\land~A \in s$               | $\vec{u} \times \vec{v}=\vec{0}~\land~\vec{u}\times \vec{AB}=\vec{0}$             |
+| parallel         | $(\vec{u}~\parallel~\vec{v})~\land~A \notin s$            | $\vec{u} \times \vec{v}=\vec{0}~\land~\vec{u}\times \vec{AB}\ne\vec{0}$           |
+| intersecting     | $(\vec{u}~\nparallel~\vec{v})~\land~r~\cap~s=P$           | $\vec{u} \times \vec{v}\ne\vec{0}~\land~\vec{u}\times \vec{v} \cdot \vec{AB}=0$   |
+| skewed           | $(\vec{u}~\nparallel~\vec{v})~\land~r~\cap~s=\varnothing$ | $\vec{u} \times \vec{v}\ne\vec{0}~\land~\vec{u}\times \vec{v} \cdot \vec{AB}\ne0$ |
+
+### Are two lines coinciding?
+
+REFAC
+
+To be defined as coinciding, two lines must have their direction vectors [[Vectors#Dependency|linearly dependent]] and the staring points on the same line.
+
+First, check if the two direction vectors are [[Vectors#Dependency|linearly dependent]]:
+
+$$
+\vec{a} \times \vec{b} = 0
+$$
+
+then, check if they are coinciding by using the [[Vectors#Cross Product|cross product]]:
+
+$$
+\vec{a} \times \vec{AB} = 0
+$$
+
+[[🚨]] When  $\vec{a} \times \vec{b} \ne \vec{0} ~ \land ~ \vec{a} \times \vec{AB}\ne \vec{0}$, $B$ is the intersection point between the two lines.
 
 ### [[🔎]] Examples
 
@@ -333,8 +389,8 @@ Given:
 
 $$
 \begin{cases}
-x = 1 - t\\
-y = t - 1 \\
+x = 1 - \lambda\\
+y = \lambda - 1 \\
 z = 5 \\
 \end{cases}
 $$
@@ -342,10 +398,122 @@ $$
 The parametric equation could be defined as:
 
 $$
-P(t) = (1, -1, 5) + t \cdot
+P(t) = (1, -1, 5) + \lambda \cdot
 \begin{bmatrix}
 -1 \\
 1 \\
 0
 \end{bmatrix}
 $$
+
+### Distances
+
+#### Between skewed lines
+
+To find the distance between two skewed lines, the normal vector $\vec{n}$ can be used.
+
+$$
+\vec{n} = \vec{a} \times \vec{b}
+$$
+
+where $\vec{a}$ and $\vec{b}$ are the two direction vectors of the two [[#Lines]].
+
+Given any point on line $a$ (e.g. $A$) and any point on line $b$ (e.g. example $B$), the distance between $a$ and $b$ is equal to the norm of the vector projection of $\vec{AB}$ onto $\vec{n}$. 
+
+$$
+d = pro(\vec{AB}, \vec{n}) \cdot ||\vec{n}||
+$$
+
+## Planes
+
+To introduce the plane cartesian equation the following principle may be taken into consideration:
+
+Given a point $A$ and a vector $\vec{n}$, the plane that includes $A$ having a normal vector $\vec{n}$ is the set of points $P$ such that $\vec{v} \perp \vec{AP}$.
+
+It can then be deduced that the vector $\vec{n}$ defines the orientation of the plane. This vector is the result of $\vec{a} \times \vec{b}$ where $\vec{a}$ and $\vec{b}$ are the two vectors that can define the plane.
+
+> $\vec{v} \perp \vec{AP} \implies \vec{v} \cdot \vec{AP} = 0$
+
+![[plane_normal_vector.excalidraw]]
+
+Base form:
+
+$$
+a(x-x_{0})+b(y-y_{0})+c(z-z_{0})=0
+$$
+
+Simplifying:
+
+$$
+ax + by + cz = d
+$$
+
+[[👁️]] note that $a,b,c$ are the components of $\vec{n}$.
+
+> A plane crosses the origin when the cartesian equation equals `0`
+### With points
+
+Find parametric equation of a plane defined by 3 points:
+
+$$
+P = A + s \cdot \overrightarrow{AB} + t \cdot \overrightarrow{AC}
+$$
+
+where $P$ is:
+
+$$
+P = (x, y , z)
+$$
+
+remembering that this expression must be valid:
+
+$$
+\vec{n} \cdot \vec{AP} = 0
+$$
+
+### [[🛠️]] Applications
+
+#### Find cartesian equation of 3 points ABC
+
+Build the normal vector:
+
+$$
+\vec{n} = \vec{AB} \times \vec{AC}
+$$
+
+then solve for $x,y,z$:
+
+$$
+\vec{n} \cdot \vec{AP}
+$$
+n = AB x AC => n dot AP
+where P = (x, y, z)
+
+param equation of line that crosses point and is orthogonal to a plane:
+use point of plane that is given and for the direction vector use n
+
+project point on plane:
+BA hwere b on plane and A in space -> pro(BA,n) -> finds BK -> A-BK = H which is the projection of A onto the plane
+
+define plane che passa per A e sia orthogonale a r (retta)
+use line direction vector such that each component is for x y and z. then after equals we need a point that satisfies the equation so we use the coordinates of the point to substitute x y and z.
+output: ax + by + cz = d
+or see it also as H, the intersectino of the plane (that crksses A) with the line, where H is the prijectin of A onto the line
+
+piano che passa per due rette parallele
+find AB, vector that connects both lines then cross that with the lines direction vector
+then create cartesian eq with that vector
+
+find piano che continie rette incidenti
+cross con vettori direzione e poi cartesian eq usando il punto di intersez
+
+
+
+
+
+interesezione r con piano
+Ax + By + Cz = k
+ABC -> componenti vettore normale piano
+x->component x eq param
+y->component y eq param
+z->component z eq param

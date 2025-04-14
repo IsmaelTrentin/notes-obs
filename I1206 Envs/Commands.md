@@ -327,3 +327,75 @@ parallel echo ::: A B C ::: X Y Z
 # > B Y
 # > C Z
 ```
+
+## `test`
+
+Tests various expressions. It can be abbreviated with: `[ ... ]`, for example:
+
+```bash
+#!/bin/bash
+if [ -f $f ]; then
+	echo "$f is a file!"
+fi
+```
+
+REFAC:
+all options...
+`-z` test if str is empty
+
+## `select`
+
+Interactive option selection
+
+```bash
+#!/bin/bash
+select var in A B C; do
+	echo $var
+	break
+done
+```
+
+## `dialog`
+
+Basic UNIX UI dialog
+
+```bash
+dialog --title "Title" --info-box "text" 10 30
+```
+
+## `grep`
+
+```bash
+# use regexp and take negated results
+grep -v -E <regexp> <input>
+```
+
+## `sed`
+
+Powerful text processing tool used for parsing and transforming text in files or input streams. Performs substitution, deletion, insertion, and searching on text streams.
+
+```bash
+# substitution 
+sed 's/pattern/replacement/' file
+$str | sed 's/pattern/replacement/'
+
+# deletion
+sed '2d' file.txt # Delete line 2 
+sed '/pattern/d' file # Delete lines matching "pattern"
+sed '1,3d' file # Delete lines 1 to 3
+
+# insertion
+sed '2i\New line' file.txt   # Insert "New line" before line 2
+sed '3a\Another line' file   # Append "Another line" after line 3
+
+# regexp
+sed -E 's/[0-9]+/#/g' file.txt
+
+# multiple executions with -e
+sed -E -e 's/(foo)+/bar/' -e 's/baz/qux/' file.txt
+# use ; instead of -e
+sed 's/foo/bar/; s/baz/qux/' file.txt
+```
+
+> `pattern` supports regexp
+> `-E` enables you to not escape special characters 
