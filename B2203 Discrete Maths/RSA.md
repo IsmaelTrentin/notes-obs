@@ -93,3 +93,44 @@ $$
 ## Cifrario cesare
 
 to decypher: remainder class n - key
+
+## MCD
+
+se $a = qb + r$
+
+$$
+MCD(a, b) = MCD(b, r)
+$$
+
+keep iterating, if $r=0$ then $MCD(a,b)=r_{n-1}$
+
+$a$ possiede inverso molt in $\mathbb{Z}_{n}$ se $MCD(a, n) = 1$
+
+### Euclid Algo
+
+if
+
+$$
+1 = ka + tn
+$$
+
+then
+
+$$
+ka = 1 \text{ in } \mathbb{Z}_{n}
+$$
+
+therefore
+
+$$
+a^{-1} = k \text{ in } \mathbb{Z}_{n}
+$$
+
+
+### Bezout Algo
+
+check slides 😭
+
+
+
+

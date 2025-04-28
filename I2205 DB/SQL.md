@@ -50,3 +50,23 @@ CREATE TABLE loan (
 UNIQUE for 1:1
 NOT NULL for total participation
 
+## Sequence (Auto-Increment)
+
+```sql
+CREATE SEQUENCE s_name START WITH 1 INCREMENT BY 1;
+-- ...
+s_name.next()
+```
+
+## Insert
+
+```sql
+INSERT INTO table_name(col, ...) VALUES(col_val, ...);
+```
+
+## Update
+
+```sql
+UPDATE table_name SET col = <expr/subquery>
+WHERE <condition>
+```
