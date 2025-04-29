@@ -70,3 +70,18 @@ INSERT INTO table_name(col, ...) VALUES(col_val, ...);
 UPDATE table_name SET col = <expr/subquery>
 WHERE <condition>
 ```
+
+## Select
+
+`*` wildcard: `%`
+`?` wildcard: `_`
+
+For string comparisons use `LIKE`, if exact match is needed then `=`.
+
+`to_date('1.1.1970', 'DD.MM.YYYY')`
+
+`UNION` removes duplicates
+`UNION ALL` keeps duplicates
+
+### Join
+
