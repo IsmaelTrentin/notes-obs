@@ -132,5 +132,36 @@ $$
 check slides 😭
 
 
+## Legendre Algo
 
+we want to perform the following computation:
 
+$$
+a^b \text{ in } \mathbb{Z}_{n}
+$$
+
+1. transform $b$ into a base $2$ number
+2. express $a^b$ as $a^{b_{i}}$, where $b_i$ are the weights of the base $2$.
+
+example:
+
+$$
+\begin{align}
+&7^9 \text{ in } \mathbb{Z}_{n}& \\
+&9_{10} = 1001_{2}& \\
+\\
+&7 \mod 11 &= 7 \\
+&7^2 \mod 11 &= 5 \\
+&7^4 \mod 11 = 7^2 \cdot 7^2 \mod 11 = 5 \cdot 5 \mod 11 &= 3 \\
+&7^8 \mod 11 = 3 \cdot 3 \mod 11 &= 9 \\
+\\
+&\implies 7^9 = 7 \cdot 9 \mod 11 = 8
+\end{align}
+$$
+
+the steps required are:
+
+$$
+len(b_{2})
+$$
+[[🚨]]  starting from the LSB!
