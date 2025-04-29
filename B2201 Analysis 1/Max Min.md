@@ -53,6 +53,9 @@ se $f''(x) < 0$ per $x < x_{0}$ e $f''(x) > 0$ per $x > x_{0}$
 oppure $f''(x) > 0$ per $x < x_{0}$ e $f''(x) < 0$ per $x > x_{0}$
 allora in $x0$ ho un flesso
 
+ci puo' essere un flesso anche se $f'' \not \exists$. Per esempio in un punto a tangenza verticale dove $f' \not \exists ~\land~ f'' \not \exists$ o nell 'onda'.
+Per $x^4$ per esempio pero' $f''=0$ non e' un punto di flesso perche' non cambia segno/convessita'.
+
 in x0 c'e' flesso se cambia la convessita' di f.
 
 quando un punto non e' ne massimo ne minimo, quindi analisi del segno $f'(x_{0})=0$ ha stesso segno sia a sinistra che destra.
