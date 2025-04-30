@@ -1,8 +1,7 @@
 ---
 tags:
   - envs
-lang:
-  - en
+lang: en
 ---
 
 ## Permissions
@@ -45,7 +44,7 @@ ls 1[0-9][^0-9]* 20[^0-9]*
 | `stderr` | `2`        |
 | `stdin`  | `0`        |
 
->Default redirection (`1>`) **does not** include errors and will overwrite destination contents. To append use `>>`.
+> Default redirection (`1>`) **does not** include errors and will overwrite destination contents. To append use `>>`.
 
 ### `stdout`
 
@@ -118,6 +117,7 @@ ls -l /path 2>ls_errs.log | grep pattern 2>grep_errs.log
 # tree's `stdout` will be diverted to `tree.log` resulting in grep not receiving the data through piping.
 tree /home >tree.log | grep pattern
 ```
+
 ## Conditional run
 
 `&&`: continue only if previous command was successful, otherwise stop.

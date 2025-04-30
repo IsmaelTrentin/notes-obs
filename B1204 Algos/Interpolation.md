@@ -1,7 +1,5 @@
 ---
 tags:
   - algos
-lang:
-  - en
+lang: en
 ---
-

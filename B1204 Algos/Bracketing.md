@@ -1,8 +1,7 @@
 ---
 tags:
   - algos
-lang:
-  - en
+lang: en
 ---
 
 ## Bisezione
@@ -10,7 +9,7 @@ lang:
 refac
 
 find **one** f(x) zero in a range by choosing a random point and checking if its above or below the function. each time adjusting to shrink the range.
-see excalidraw 
+see excalidraw
 
 $$
 k: [a_{k}, b_{k}]
@@ -30,7 +29,6 @@ $$
 
 if f(ak) . f(ck) < 0 -> then is on the left then new range is \[ak, ck]
 if f(ak) . f(ck) > 0 -> then is on the right then new range is \[ck, bk]
-
 
 stima errore:
 
@@ -72,7 +70,6 @@ $$
 m=\frac{f(b)-f(a)}{b-a}
 $$
 
-
 per problema geometrico uno dei punti si potrebbe fissare -> MALE!
 
 ```desmos-graph
@@ -98,7 +95,7 @@ f(x)=x^2-2
 
 ## Ricorsivi
 
-non garantiscono convergenza 
+non garantiscono convergenza
 
 si stabilisce fine quando
 
@@ -110,7 +107,7 @@ $$
 |x_{k} - x_{k-1}| < \epsilon
 $$
 
-> dove $\epsilon$ e' la tolleranza 
+> dove $\epsilon$ e' la tolleranza
 
 ### Secante
 
@@ -120,7 +117,7 @@ $$
 x_{j+1} = x_{j} - \frac{f(x_{j})}{\frac{f(x_{j}) - f(x_{j-1})}{x_{j} - x_{j-1}}}
 $$
 
-returns/uses sequence of $x$: 
+returns/uses sequence of $x$:
 
 $$
 x_{0},x_{1},x_{2},\dots,x_{n} \to x^*
@@ -129,7 +126,7 @@ $$
 convergence (to one zero of $f$):
 
 $$
-\lim_{ n \to \infty } |x_{n} - x^*| = 0 
+\lim_{ n \to \infty } |x_{n} - x^*| = 0
 $$
 
 ### Tangente
@@ -139,13 +136,14 @@ forma generale rette:
 $$
 y = m(x - x_{0}) + y_{0}
 $$
+
 specifica per algo:
 
 $$
 y = f'(x_{0})(x-x_{0})+f(x_{0})
 $$
 
-> using derivatives $m$ is found through $f'(x_0)$ 
+> using derivatives $m$ is found through $f'(x_0)$
 
 giving the succession of points:
 
@@ -194,6 +192,7 @@ f(x) &= -x^{-1} & \text{3a regola} \\
 f(x) &= +x^{-2} &
 \end{align}
 $$
+
 ### Numeric Derivative
 
 $$
@@ -228,7 +227,7 @@ $$
 
 first: e_k
 
-e_k dipende da l'x* corrente in cui si converge!!! ( se ci sono piu zeri )
+e_k dipende da l'x\* corrente in cui si converge!!! ( se ci sono piu zeri )
 
 > p defines at what speed we gain more zeros in precision, for example if $p=2$ each time we gain 2 zeros
 
@@ -244,7 +243,6 @@ BIS & RF -> SEC -> TAN
 
 > from worse to best
 
-
 SEC and TAN are super linear
 BIS is linear
 
@@ -253,8 +251,7 @@ TAN is super linear except when:
 $$
 f'(x*) = 0
 $$
+
 the algo then becomes slower
 
 > same thing as saying that $\text{x*}$ is a double zero ($f(x) = x^2$)
-
-

@@ -1,8 +1,7 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 ## nMOS
@@ -12,7 +11,7 @@ Given $G_{i}$ as the gate input and $O_{t}$ as the transistor output:
 $$
 \begin{align}
 G_{i} = 0 \iff O_{t} = 0 \\
-G_{i} = 1 \iff O_{t} = 1 
+G_{i} = 1 \iff O_{t} = 1
 \end{align}
 $$
 
@@ -25,7 +24,7 @@ Given $G_{i}$ as the gate input and $O_{t}$ as the transistor output:
 $$
 \begin{align}
 G_{i} = 0 \iff O_{t} = 1 \\
-G_{i} = 1 \iff O_{t} = 0 
+G_{i} = 1 \iff O_{t} = 0
 \end{align}
 $$
 

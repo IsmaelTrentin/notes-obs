@@ -1,8 +1,7 @@
 ---
 tags:
   - precalculus
-lang:
-  - en
+lang: en
 ---
 ## Definition
 

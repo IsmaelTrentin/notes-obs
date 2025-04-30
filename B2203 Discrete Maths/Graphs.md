@@ -1,8 +1,7 @@
 ---
 tags:
   - discrete
-lang:
-  - en
+lang: en
 ---
 
 ## Defs
@@ -13,10 +12,10 @@ loop: A---A
 parallel: A---B, A--B
 
 $v$ --- $w$
-$v$ and $w$ are adjacent 
+$v$ and $w$ are adjacent
 
 edges notation for SIMPLE GRAPHS:
-$v$ --- $w$  $\{v, w\}$
+$v$ --- $w$ $\{v, w\}$
 
 a path that starts and ends in the same node is called a loop
 if all nodes are connected -> connected graph
@@ -68,6 +67,7 @@ Graph bipartito $K_{n,m}$: $n$ nodi tutti connessi for each $m$ nodi e viceversa
 $\text{\#archi} = m\cdot n$
 deg nodi n is m and deg nodi m is n
 euleriano se e solo se n e m entrambi pari
+
 ## Fundamental Theorem
 
 Let $G$ be a graph with set of vertices $V$ and set of edges $E$:
@@ -78,13 +78,14 @@ $$
 
 ## Complementary Graph
 
- connessioni negate. il complementare e' sempre piu' piccolo.
+connessioni negate. il complementare e' sempre piu' piccolo.
 
 edges:
 
 $$
 \frac{n(n-1)}{2}-m
 $$
+
 get compl deg sequence from deg sequence:
 
 $$
@@ -133,8 +134,6 @@ Two graphs $G=(V, E)$ and $G'=(V',E')$ are defined isomorphic if a bijective fun
 
 $$\{x,y\}\in E \Leftrightarrow \{f(x), f(y)\}\in E'$$
 
-
-
 ## Laplacian Matrix
 
 $$
@@ -145,7 +144,7 @@ Where $\hat{D}$ is the [[#Degrees Matrix]] and $\hat{A}$ is the [[#Adjacency Mat
 
 $dim(Ker(\hat{A}))$ is the number of connected components of a graph.
 
-## Planarity 
+## Planarity
 
 A graph is planar if it exists any drawing that does not intersect edges (plane drawing).
 

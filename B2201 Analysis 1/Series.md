@@ -1,8 +1,7 @@
 ---
 tags:
   - analysis
-lang:
-  - en
+lang: en
 ---
 
 ## Defining a limit
@@ -29,7 +28,7 @@ $$
 \end{align}
 $$
 
-### Monotonicity 
+### Monotonicity
 
 $\{2^i\}_{i ~\in~ \mathbb {N}} ~\forall~ i \in \mathbb{N} \implies a_{i} \leq a_{i + 1} \implies \text{Monotona Crescente}$
 $\left\{ \frac{1}{i} \right\}_{i ~\in~ \mathbb {N}} ~\forall~ i \in \mathbb{N} \implies \frac{1}{i + 1} \leq \frac{1}{i} \implies \text{Monotona Decrescente}$
@@ -76,7 +75,7 @@ q=limx->+-ifty (f(x)-mx)
 for $e$:
 
 $$
-\lim_{ n \to \infty } \left( 1 + \frac{1}{n} \right)^n = e 
+\lim_{ n \to \infty } \left( 1 + \frac{1}{n} \right)^n = e
 $$
 
 $$
@@ -153,11 +152,10 @@ sub for x:
 if 0/0 -> manip
 if n/0 -> asympt. sub for x > n -> lim_n+ and sub for x < n -> lim_n-. basically find the sign of the function
 
-
-## Continuity 
+## Continuity
 
 $$
-\lim_{ x \to x_{0} } f(x) = f(x_{0}) 
+\lim_{ x \to x_{0} } f(x) = f(x_{0})
 $$
+
 se vero, e' continua in $x_{0}$.
-

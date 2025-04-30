@@ -1,10 +1,11 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
+
 REFAC
+
 ## Punto altezza massima
 
 Pongo $v_{y}(t) = 0$.
@@ -37,4 +38,3 @@ Altrimenti:
 $$
 R = \frac{v_{0}^2}{g}\sin 2 \theta
 $$
-

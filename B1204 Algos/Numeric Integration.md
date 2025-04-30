@@ -1,13 +1,13 @@
 ---
 tags:
   - algos
-lang:
-  - en
+lang: en
 ---
 
 ## Antiderivative / Primitive
 
 Using $F$:
+
 $$
 \int_{a}^b f'(x)dx = F(b) - F(a)
 $$
@@ -31,4 +31,3 @@ $$
 $$
 A_{tot} = \frac{x_{n}-x_{0}}{n} \sum_{j=0}^{n-1} \frac{f(x_{j}) + f(x_{j+1})}{2}
 $$
-

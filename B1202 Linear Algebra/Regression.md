@@ -1,8 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang:
-  - en
+lang: en
 ---
 
 ## Example
@@ -25,7 +24,6 @@ a_{0} + 3a_{1} = 4 \\
 a_{0} + 5a_{1} = 8
 \end{cases}
 $$
-
 
 we can directly solve (if we do not need $\hat{P}$ and $\hat{b'}$):
 
@@ -167,4 +165,3 @@ That can be solved by approximating using regression:
 $$
 \vec{x} = (A^T A)^{-1} A^T \cdot \vec{b}
 $$
-

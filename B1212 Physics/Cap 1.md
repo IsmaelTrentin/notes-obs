@@ -2,8 +2,7 @@
 tags:
   - physics
   - draft
-lang:
-  - it
+lang: it
 ---
 
 ## La fisica e le leggi della natura
@@ -11,6 +10,7 @@ lang:
 `Fisica` = studio delle leggi fondamentali della natura descrivibili e quantificabili tramite grandezze fisiche al fine di stabilire principi e leggi. Cio' viene raggiunto tramite un modello.
 
 `Grandezza fisica`: proprieta' fisica di un fenomeno, corpo o sostanza che puo' essere:
+
 - misurata
 - espressa tramite numero
 - espressa tramite riferimento
@@ -29,6 +29,7 @@ lang:
 
 - **Intrinseche**: _non_ dipendono dal sistema di riferimento
 - **Estrinseche**: _dipendono_ dal sistema di riferimento
+
 ## Cifre significative
 
 Precisione della misura. Gli zeri a sinistra non contano.

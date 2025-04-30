@@ -1,15 +1,14 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
-delay between I/O states changing 
+delay between I/O states changing
 
 delay caused by:
-capacitance 
-resistance 
+capacitance
+resistance
 speed of light
 temperature
 

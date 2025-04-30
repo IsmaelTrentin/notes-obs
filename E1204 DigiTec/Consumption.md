@@ -1,8 +1,7 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 ## Dynamic
@@ -16,4 +15,3 @@ $$
 $$
 P_{static} = I_{DD} \cdot V_{DD}
 $$
-

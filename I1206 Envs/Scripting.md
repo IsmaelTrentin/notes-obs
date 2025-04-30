@@ -1,8 +1,7 @@
 ---
 tags:
   - envs
-lang:
-  - en
+lang: en
 ---
 
 refac
@@ -36,7 +35,7 @@ echo ${N#*o}
 # longest match
 echo ${N##*o}
 
-# string substitution 
+# string substitution
 echo ${N/world/lapis}
 
 # slices

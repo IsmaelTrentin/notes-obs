@@ -1,8 +1,7 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 refac
@@ -25,11 +24,8 @@ mentre $a_{cp}$ tiene conto del verso e direzione
 modulo $v$ costante $\implies$ $a_{\tan} = 0$
 modulo $v$ costante $!{\implies}$ $a_{cp} = 0$
 
-
-
 periodo>?
 
 $$
 T=2\pi \sqrt{ \frac{L}{g} }
 $$
-

@@ -1,16 +1,15 @@
 ---
 tags:
   - db
-lang:
-  - it
+lang: en
 ---
 
 Ristrutturazione ER:
 
 - analisi ridondanze
-- rimozione generalizzazioni 
+- rimozione generalizzazioni
 - rimozione attr multi val
-- partitioning/merging entita' e relazioni 
+- partitioning/merging entita' e relazioni
 - selezione primary key
 
 ## Generalizzazioni

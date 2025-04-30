@@ -8,7 +8,7 @@ last-edited: 2024-10-26
 
 [[The 3 y's]]
 [[Bits]]
-[[2's Complement]]
+[[Twos Complement]]
 [[Logic Gates]]
 [[Noise]]
 [[Logic Families]]
@@ -25,7 +25,7 @@ last-edited: 2024-10-26
 
 ### 2's Complement
 
-![[2's Complement]]
+![[Twos Complement]]
 
 ### Logic Gates
 

@@ -1,8 +1,7 @@
 ---
 tags:
   - precalculus
-lang:
-  - en
+lang: en
 ---
 
 REFAC
@@ -16,7 +15,6 @@ deg to rad
 
 rapporti trigonometrici
 ![[Pasted image 20241105154135.png]]
-
 
 sin alpha / cos alpha = a/b = tan alpha
 cotan alpha = cos / sin

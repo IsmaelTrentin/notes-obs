@@ -1,8 +1,7 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 refac
@@ -13,7 +12,7 @@ $$
 W = \vec{F} \cdot \vec{\Delta{s}} = |\vec{F}| \cdot |\vec{\Delta{s}}| \cdot \cos \theta ~~~~[J]
 $$
 
-segno del lavoro non dipende dal sistema di riferimento 
+segno del lavoro non dipende dal sistema di riferimento
 
 non dipende dalla traiettoria:
 
@@ -28,6 +27,3 @@ a 90 w = 0
 => segno del lavoro deciso dal coseno
 
 1/2kx^2 lavoro molla
-
-
-

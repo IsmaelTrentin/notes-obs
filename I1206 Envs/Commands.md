@@ -1,8 +1,7 @@
 ---
 tags:
   - envs
-lang:
-  - en
+lang: en
 ---
 
 ## `history`
@@ -57,8 +56,8 @@ Common args:
 - `-size`: file size. supports byte scale indicator. add - before to check if size less than
 - `-type`: file type (`bcdflps`)
 - `-exec`: exec command for each entry. `-exec copy {} destination MODE`
-	- `+`: exec command once with all results as args
-	- `\;`: exec command for each result
+  - `+`: exec command once with all results as args
+  - `\;`: exec command for each result
 
 ```bash
 # find files ending with `.jpg` and copy them one by one to `/destination`
@@ -74,7 +73,7 @@ Sorts input.
 `-n`: sort on numerical value
 
 ```bash
-# numerically sort random sequence of numbers 
+# numerically sort random sequence of numbers
 seq 1 20 | sort -R | sort -n
 ```
 
@@ -110,11 +109,12 @@ zless file.blah.gz
 
 `-d`: delimiter character
 `-f`: 1 base field column index
+
 - can be stacked (`-f 1,2,3`)
 
 ```bash
 # splits line by ';' and returns the first element
-cat csv | head -n 1 | cut -d ';' -f 1 
+cat csv | head -n 1 | cut -d ';' -f 1
 ```
 
 ## `tr`
@@ -150,7 +150,6 @@ seq 1 100 | grep 8 | tee /dev/stderr
 
 Prints current date time to `stdout`
 
-
 ## `stat`
 
 Shows permission stats.
@@ -166,7 +165,7 @@ stat file.ext
 # Modify: 2024-10-03 10:27:34.060522655 +0200
 # Change: 2024-10-03 10:27:34.060522655 +0200
 #  Birth: 2024-09-26 10:45:31.049602148 +0200
-# <yyyy-MM-dd> <hh:mm:ss.ms> 
+# <yyyy-MM-dd> <hh:mm:ss.ms>
 ```
 
 ## `whoami`
@@ -230,6 +229,7 @@ See [[Permissions#setuid]]
 # exec file using parent gid and not the executor gid
 chmod g+s executable_file
 ```
+
 ### setgid
 
 See [[Permissions#setgid]]
@@ -375,12 +375,12 @@ grep -v -E <regexp> <input>
 Powerful text processing tool used for parsing and transforming text in files or input streams. Performs substitution, deletion, insertion, and searching on text streams.
 
 ```bash
-# substitution 
+# substitution
 sed 's/pattern/replacement/' file
 $str | sed 's/pattern/replacement/'
 
 # deletion
-sed '2d' file.txt # Delete line 2 
+sed '2d' file.txt # Delete line 2
 sed '/pattern/d' file # Delete lines matching "pattern"
 sed '1,3d' file # Delete lines 1 to 3
 
@@ -398,4 +398,4 @@ sed 's/foo/bar/; s/baz/qux/' file.txt
 ```
 
 > `pattern` supports regexp
-> `-E` enables you to not escape special characters 
+> `-E` enables you to not escape special characters

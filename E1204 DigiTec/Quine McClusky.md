@@ -1,9 +1,7 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 ## REFAC McClusky
-

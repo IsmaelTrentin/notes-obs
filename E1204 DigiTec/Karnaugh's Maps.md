@@ -1,11 +1,9 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 ## K-MAPS
 
 ![[digit-kmaps.excalidraw]]
-

@@ -1,8 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang:
-  - en
+lang: en
 ---
 
 ## Definition
@@ -28,7 +27,6 @@ while for sets:
 $$
 \{1,2,2\} = \{1,2\}
 $$
-
 
 ## Operations
 
@@ -83,6 +81,7 @@ or
 $$
 \vec{v} \cdot \vec{u} = ||\vec{v}|| \cdot ||\vec{u}|| \cdot \cos \alpha
 $$
+
 $$
 \cos \alpha = \frac{\vec{v} \cdot \vec{u}}{||\vec{v}|| \cdot ||\vec{u}||}
 $$
@@ -134,6 +133,7 @@ Cross product **does not** benefit of the **commutative** property, it instead b
 $$
 \vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})
 $$
+
 It also does not benefit of the associative property:
 
 $$
@@ -172,11 +172,12 @@ See uses in [[Vectorial Geometry#Triple Product in Vectorial Geometry|Vectorial 
 ## Linear Combination
 
 A vector can be defined as a multiple of $n$ vectors with parameters ${k,j,h,...}$ like so:
+
 $$
 \vec{a} = k \vec{v} + j \vec{u}
 $$
 
-Define $\vec{w}$ as a **LC** of $\vec{v}, \vec{u}, \vec{o}$: 
+Define $\vec{w}$ as a **LC** of $\vec{v}, \vec{u}, \vec{o}$:
 
 $$
 \begin{equation}
@@ -310,10 +311,8 @@ $$
 \vec{A} + \vec{v} = B
 $$
 
-
-
 ### $x$ present in vector definition
 
 1. Linear systems equation with rows not containing $x$
 2. For [[#Dependency|LD]]: use the value obtained from using $h,k$
-3. For [[#Dependency|LI]]: use any value $\ne$ from value obtained from using $h,k$ 
+3. For [[#Dependency|LI]]: use any value $\ne$ from value obtained from using $h,k$

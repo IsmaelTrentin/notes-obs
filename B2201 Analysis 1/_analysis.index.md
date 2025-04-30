@@ -1,12 +1,9 @@
 ---
 tags:
   - analysis
-lang:
-  - en
+lang: en
 ---
-
 
 ## Sources
 
 ## Chapters
-

@@ -1,8 +1,7 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 ## Definizioni

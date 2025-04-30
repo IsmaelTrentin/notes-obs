@@ -1,8 +1,7 @@
 ---
 tags:
   - envs
-lang:
-  - en
+lang: en
 ---
 
 ## Permissions on Linux
@@ -90,4 +89,3 @@ It is applied on directories and allows only the directory owner to delete entri
 
 `t`: execution + sticky permissions
 `T`: only sticky permission.
-

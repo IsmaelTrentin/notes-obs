@@ -1,8 +1,7 @@
 ---
 tags:
   - algos
-lang:
-  - en
+lang: en
 ---
 
 ## In $\mathbb{N}$
@@ -50,7 +49,6 @@ Decimal to bits:
 | $\dots$                         | $\dots$                      |
 |                                 | $int(0)$                     |
 
-
 ### [[🔎]] Examples
 
 Given $k=1010_{2}$, convert $k$ in base $10$:
@@ -70,6 +68,7 @@ $$
 7_{10} &= 111_{2}
 \end{alignat}
 $$
+
 ### Special conversions
 
 If $b_{t}$ is a power of $b_{s}$, target digits may be coupled by the power of $b_s$ to $b_t$.
@@ -80,15 +79,15 @@ $210745_{10} =$ `21` `07` `45` $_{100}$
 
 ## In $\mathbb{Z}$ with 2's complement
 
-The algorithm remains the same as [[#In $ mathbb{N}$|Horner]] in $\mathbb{N}$, but to support a valid representation of negative numbers in base `2`, the [[2's Complement]] is used.
+The algorithm remains the same as [[#In $ mathbb{N}$|Horner]] in $\mathbb{N}$, but to support a valid representation of negative numbers in base `2`, the [[Twos Complement]] is used.
 
-The [[2's Complement]] of $k$, named $x$, is defined as:
+The [[Twos Complement]] of $k$, named $x$, is defined as:
 
 $$
 -k = -(2^N - x)
 $$
 
-$-k$ is a negative integral number and $x$ is the number that subtracted to $2^N$ gives $k$. This $x$ is the [[2's Complement]] representation of $-k$ in base `2` with $N$ bits.
+$-k$ is a negative integral number and $x$ is the number that subtracted to $2^N$ gives $k$. This $x$ is the [[Twos Complement]] representation of $-k$ in base `2` with $N$ bits.
 
 So to obtain $x$:
 
@@ -96,7 +95,7 @@ $$
 x = 2^N - k
 $$
 
-Having obtained $x$, it can now be converted to base `2` and return a [[2's Complement]] representation of $-k$.
+Having obtained $x$, it can now be converted to base `2` and return a [[Twos Complement]] representation of $-k$.
 
 ### From bits to decimal
 
@@ -121,10 +120,10 @@ $$
 -17 = -(2^{32} - x) \\
 x = 2^{32} - 17 = 4294967279 \\
 x = FFFFFFEF_{h}
-\end{alignat*} 
+\end{alignat*}
 $$
 
-## In $\mathbb{Q}$ 
+## In $\mathbb{Q}$
 
 Digits after the decimal point use the respective negative weights:
 
@@ -216,7 +215,7 @@ where $int$ is a function that returns the integral part of a number in $\mathbb
 
 ## In $\mathbb{R}$
 
-To represent real numbers, machines need to approximate. In this set, [[2's Complement]] is not defined, hence not used.
+To represent real numbers, machines need to approximate. In this set, [[Twos Complement]] is not defined, hence not used.
 
 Representation error:
 
@@ -243,7 +242,7 @@ It is better to have an independent $\epsilon_{r}$. Lower numbers will have a mu
 
 refac
 absolut error approx way:
-0.overflown bits from mantissa \* 2 ^ exp - 23 
+0.overflown bits from mantissa \* 2 ^ exp - 23
 
 for relative
 ea/|x| < 2^p-23/|x| < 2^-23
@@ -251,11 +250,10 @@ check slides with formulae
 -> -1 implies division by two because when using approx the max error will always be half the size of the truncated one
 
 approx:
-when 24th' bit is 1The  -> +1
+when 24th' bit is 1The -> +1
 when 24th' bit is 0 -> unchanged
 
-denormalized mantissa is like working with less bits. it is dangerous 
-
+denormalized mantissa is like working with less bits. it is dangerous
 
 ### IEEE 754 Float
 
@@ -270,7 +268,7 @@ denormalized mantissa is like working with less bits. it is dangerous
 
 ### From decimal to IEEE 754
 
-- [[#From base $10$ to $b$|Inv. Horner in N]] the integral part 
+- [[#From base $10$ to $b$|Inv. Horner in N]] the integral part
 - [[#In $ mathbb{Q}$|Inv. Horner in Q]] the fractional part
 - Normalize mantissa (1.mantissa_bits) and compensate exponent
 

@@ -1,8 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang:
-  - en
+lang: en
 ---
 
 # Def
@@ -25,7 +24,7 @@ to get $\rho$ we need to translate the vectors such that the best correlation li
 that is achieved by traslating by the center of mass $m$:
 $\vec{X} = \vec{X} - m_{X}$
 $\vec{Y} = \vec{Y} - m_{Y}$
-[[👁️]] where $M$ is the `avg` of all the vector components 
+[[👁️]] where $M$ is the `avg` of all the vector components
 then we calculate the cosine using [[Vectors#Dot Product]]
 
 $$

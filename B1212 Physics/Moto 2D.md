@@ -1,8 +1,7 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 ## Posizione in funzione del tempo
@@ -38,6 +37,7 @@ $$
 $$
 v_{y}^2 = v_{0_{y}}^2 + 2a_{y}\Delta{y}
 $$
+
 ## Applicazioni
 
 ![[Moto Del Proiettile]]

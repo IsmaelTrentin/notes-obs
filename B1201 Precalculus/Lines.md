@@ -1,8 +1,7 @@
 ---
 tags:
   - precalculus
-lang:
-  - en
+lang: en
 ---
 
 ## Line
@@ -22,6 +21,7 @@ Having two functions: $f(x)$ and $g(x)$, if:
 $$
 m_{f} \cdot m_{g} = -1
 $$
+
 The two lines are **perpendicular**.
 
 $$
@@ -47,6 +47,7 @@ refac tip:
 m.(x - Px) + Py
 
 ## [[🛠️]] Applications
+
 ### Crosses point $P: P=(x;y)$
 
 $$

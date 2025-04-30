@@ -1,11 +1,11 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 ## Mux
+
 refac
 
 Selects between one of $N$ inputs to connect output.

@@ -1,13 +1,12 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 ## Definizione
 
-[[Moto Rettilineo Uniformemente Accelerato]] da $g=9.81m/s$. Trascurando la resistenza dell'aria e altro, gli oggetti in caduta libera subiscono accelerazione costante e si muovono alla **medesima velocita'**. 
+[[Moto Rettilineo Uniformemente Accelerato]] da $g=9.81m/s$. Trascurando la resistenza dell'aria e altro, gli oggetti in caduta libera subiscono accelerazione costante e si muovono alla **medesima velocita'**.
 
 ## Equazioni
 

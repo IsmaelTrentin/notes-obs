@@ -1,9 +1,9 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
+
 refac
 
 vectorial force
@@ -51,8 +51,8 @@ dinamico: diret proporz alla forza normale e sempre stesso valore
 $$
 f_{d} = \mu_{d}N
 $$
-indipendepe da velocita e area
 
+indipendepe da velocita e area
 
 statico:
 ha un valore massimo
@@ -66,8 +66,8 @@ $$
 f_{s,max} = \mu_{}{s}N
 $$
 
-
 piano inclinato:
+
 $$
 \begin{cases}
 \begin{align}
@@ -89,8 +89,7 @@ $$
 f = ma = m\frac{v^2}{r}
 $$
 
-> $v^2$ e' la velocita' tangenziale 
-
+> $v^2$ e' la velocita' tangenziale
 
 $a_{cp}$ punta sempre verso il centro
 
@@ -98,14 +97,13 @@ centripeta vs centrifuga:
 centripeta esiste.
 centrifuga e' apparente, non esiste.
 
-## forze conservative 
+## forze conservative
 
 il lavoro compiuto da una forza conservativa viene immagazzinato in una forma di energia che può essere liberata in un momento successivo.
 
 conservativa -> gravita, forza peso
 non conservativa -> attrito
 
-lavoro compiuto lungo percorso chiuso = 0 => implica che e' una forza conservativa 
+lavoro compiuto lungo percorso chiuso = 0 => implica che e' una forza conservativa
 
-lavoro conservativo -> variazione di energia potenziale 
-
+lavoro conservativo -> variazione di energia potenziale

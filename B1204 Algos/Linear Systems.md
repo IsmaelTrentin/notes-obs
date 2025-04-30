@@ -1,8 +1,7 @@
 ---
 tags:
   - algos
-lang:
-  - en
+lang: en
 ---
 
 ## Exact Resolution
@@ -21,9 +20,9 @@ $$
 where $\hat{L}$ and $\hat{U}$ are triangular matrices.
 
 $\hat{U}$ is an **upper** triangular matrix achieved with Gaussian Elimination
-$\hat{L}$ is a **lower** triangular matrix with $k$ coefficients 
+$\hat{L}$ is a **lower** triangular matrix with $k$ coefficients
 
-Example: 
+Example:
 
 $$
 A=\begin{bmatrix}

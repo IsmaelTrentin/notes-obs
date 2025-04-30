@@ -1,15 +1,14 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 ## How to
 
 Negate number's bits and add `1`, using [[Overflow]] to our advantage:
 
-> [[👁️]] $1111_{2}$ is $-1_{10}$ in [[2's Complement]]
+> [[👁️]] $1111_{2}$ is $-1_{10}$ in [[Twos Complement]]
 
 ## [[🔎]] Example
 
@@ -27,4 +26,4 @@ $$
 1010_{2} + 1_{2} = 1011_{2}
 $$
 
-So $-5_{10}$ in [[2's Complement]] is $1011_{2}$
+So $-5_{10}$ in [[Twos Complement]] is $1011_{2}$

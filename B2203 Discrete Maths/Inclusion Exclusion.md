@@ -1,8 +1,7 @@
 ---
 tags:
   - discrete
-lang:
-  - en
+lang: en
 ---
 
 ## Definition
@@ -26,7 +25,7 @@ $$
 Start by counting the elements for each criteria's set. We can count divisible elements using:
 
 $$
-\left\lfloor  \frac{n}{k}  \right\rfloor 
+\left\lfloor  \frac{n}{k}  \right\rfloor
 $$
 
 where $n$ is the max value of $\Omega$ and $k$ is the divisor we need to check.

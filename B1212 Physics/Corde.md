@@ -1,8 +1,7 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 refac
@@ -17,4 +16,4 @@ $$
 F = -k\vec{\Delta{x}}
 $$
 
->$k$ e' la costante elastica
+> $k$ e' la costante elastica

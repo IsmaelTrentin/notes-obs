@@ -1,8 +1,7 @@
 ---
 tags:
   - analysis
-lang:
-  - en
+lang: en
 ---
 
 ## Circumference
@@ -24,7 +23,7 @@ $$
 \end{align}
 $$
 
-## Ellipses 
+## Ellipses
 
 When center is the origin:
 
@@ -63,6 +62,7 @@ x=x_0|y_0<y<y_0+b|GREEN
 ```
 
 > $a$ is red, $b$ is green
+
 ## Hyperboles
 
 When center is the origin:
@@ -109,6 +109,7 @@ x*(-b/a)+3|dashed|#bbbbbb
 > $a$ is red, $b$ is green
 
 if =-1 rotates by 90deg
+
 ### Generic Form
 
 $$

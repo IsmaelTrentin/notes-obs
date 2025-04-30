@@ -1,8 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang:
-  - en
+lang: en
 ---
 
 Transformation matrixes must always be invertible
@@ -53,7 +52,7 @@ $$
 \hat{A}^{-1} = \hat{A}^T
 $$
 
-> This is true $\iff \hat{A}$ is an orthonormal matrix 
+> This is true $\iff \hat{A}$ is an orthonormal matrix
 
 We can then use the origin rotation matrix:
 
@@ -70,4 +69,3 @@ Giving the formula:
 $$
 \hat{R} = \hat{A} \cdot \hat{R}_{z}(\alpha) \cdot \hat{A}^T
 $$
-

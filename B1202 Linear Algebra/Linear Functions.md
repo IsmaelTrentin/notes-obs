@@ -1,8 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang:
-  - en
+lang: en
 ---
 
 ## Def
@@ -13,7 +12,7 @@ $$
 f(\vec{x}) = A\vec{x} + \vec{b}
 $$
 
-Domini: $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$ 
+Domini: $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$
 A: mxn quindi x: nx1 e b: mx1
 
 Example
@@ -61,7 +60,7 @@ basically just translate desired center of rotation to origin and then translate
 
 > che alla fine e' il $+ \vec{b}$
 
-## Define Linearity 
+## Define Linearity
 
 1. $f(x + y) = f(x) + f(y)$
 2. $f(kx) = kf(x)$
@@ -134,7 +133,3 @@ quindi se $\vec{b}$ **non** si puo' esprimere come LC dei vettori colonna, $b \n
 $$
 rank(A) = rank(A|b)
 $$
-
-
-
-

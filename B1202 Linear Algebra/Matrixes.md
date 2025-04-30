@@ -1,8 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang:
-  - en
+lang: en
 ---
 
 REFAC
@@ -20,7 +19,7 @@ $$
 \end{bmatrix}
 $$
 
-$A_{12} = A[1][2]$ `A[0][1]` 
+$A_{12} = A[1][2]$ `A[0][1]`
 
 se m=n la matrixe e' quadrata di ordine n
 
@@ -29,23 +28,29 @@ matrix e' simmetrica quando m e m^T sono identiche
 diagonale principale -> A11, A22, A33
 
 ### operazioni
+
 #### somma:
+
 dimensione deve essere uguale
 comp + comp
 elemento neutro: matrice nulla {{0,0},{0,0}}
 matrice opposta: tutti i segni flippati
+
 #### mult:
+
 termine.eachcomp
 
-#### prodotto di matrici: 
-NON COMMUTATIVO  A.B != B.A
+#### prodotto di matrici:
+
+NON COMMUTATIVO A.B != B.A
 righe per colonne (element x elemtn)
 numero elementi uguale per ogni riga e colonna o simmetrici (3,3 con 3,3 o 2,3 con 3,2)
 regola=> numero colonne prima = numero righe seconda
 
 ##### proprieta':
+
 ✅ ASSOCIATIVA
-❌ COMMUTATIVO 
+❌ COMMUTATIVO
 ✅ DISTRIBUTIVA
 
 elemento neutro:
@@ -54,12 +59,13 @@ tutti 1 sulla diagonale, resto zero
 matrice di identita'
 
 #### inversa:
+
 sistema eq: con abcd dove righe scalar colonne = 0 | 1
 
 es:
 (1, 2, 3) riga 2
 (4,2, 1) colonna 3
-riga 2 scalar colonna 3 
+riga 2 scalar colonna 3
 3x1 dot 1x3 -> 3x3
 1x3 dot 3x1 -> 1x1
 
@@ -69,11 +75,9 @@ output? `2`x3 dot 3x`3`
 output max columns e max rows
 
 #### potenza di una matrice:
+
 deve essere quadrata
 prodotto matrice per se stessa. NO ELEVATO
-
-
-
 
 matrix xan be used as functin to transmutate vectors
 
@@ -82,7 +86,6 @@ matrix xan be used as functin to transmutate vectors
 100
 010
 001
-
 
 ### Matrice inversa
 
@@ -116,6 +119,7 @@ z & w
 0 & 1
 \end{bmatrix}
 
+
 $$
 
 $$
@@ -126,7 +130,6 @@ x &+& 2z &=& 0 \\
 y &+& 2w &=& 1
 \end{cases}
 $$
-
 
 scambia elementi sulla main diagonale
 li altri fermi ma cambiano segno
@@ -175,7 +178,7 @@ $$
 infinite matrici che non ammettono inversa -> matrici singolari
 implies that there is no other matrix that multiplied with this one gives an Id matrix
 
-## Determinante 
+## Determinante
 
 Per matrici quadrate $n \times n$
 
@@ -186,7 +189,7 @@ $$
 se `0` matrice e' singolare -> vettori colonna e riga sono LD
 se `!0` matrice ha inversa e identita' -> vettori colonna sono LI
 
-det e' l'area generata da due vettori sul piano (parlando di una 2x2). derivato da un cross con i vettori, aggiungendo un componente 0 per arrivare a R3. la norma del cross e' l'area che e' anche il determinante 
+det e' l'area generata da due vettori sul piano (parlando di una 2x2). derivato da un cross con i vettori, aggiungendo un componente 0 per arrivare a R3. la norma del cross e' l'area che e' anche il determinante
 
 create singular mat: prendi 3 numeri, l'ultimo e' bc - a = 0
 
@@ -225,6 +228,7 @@ bassa: zeri sopra main diagonale
 praticamente quando i < j -> 0
 
 ---
+
 #### having vectors w,u,v, find a LC of u and v for w:
 
 the system eq now becomes a matrix
@@ -255,7 +259,6 @@ $$
 
 where A is the matrix built with the starting vectors and b is w and vec(x) is \[h, k]
 then u.h and v.k, thats the LC
-
 
 ## punto in triangolo: rivisitato
 
@@ -292,7 +295,7 @@ When swapping row, the determinant changes sign.
 
 ### mat inversa
 
-A -> mat di determinanti delle mat complementari di ogni elemento -> cambio segno agli elementi con i+j dispari -> trasposta -> mult each elem per (det(A))^-1 
+A -> mat di determinanti delle mat complementari di ogni elemento -> cambio segno agli elementi con i+j dispari -> trasposta -> mult each elem per (det(A))^-1
 
 ### terza op riga
 
@@ -317,8 +320,7 @@ k per annullare last elem della mat originale
 step 4
 
 mult riga 1 per 3 elem id modificata
-mult riga 2 per 4 elem id modificata 
-
+mult riga 2 per 4 elem id modificata
 
 ## Rank
 
@@ -339,13 +341,13 @@ se det!=0 -> tutti vettori colonna LI -> rank = n
 
 ### mat rettangolari
 
-det != 0 tra complementari determinara LI 
+det != 0 tra complementari determinara LI
 e' max rank se e' al rango massimo che puo' avere
 
 singolare => det = 0
 non singolare => det != 0
 
-rank->numero di colonne linearmente indipendenti 
+rank->numero di colonne linearmente indipendenti
 
 ### submatrix
 
@@ -372,13 +374,14 @@ non e' unica!
 ogni pivot e' 1
 tutti gli elementi sopra pivot sono 0
 come?
+
 - annullamento elementi
 - sopra pivot a 0 sempre usando stessa tecnica
 - pivot a uno utilizzando operazione riga (mult riga per k)
 
 colonne libere esprimono LC di colonne pivot per generare la colonna corrente
 
-## Sistemi lineari 
+## Sistemi lineari
 
 Ax=b
 
@@ -396,7 +399,7 @@ $$
 A = \begin{bmatrix}
 1&3&5 \\
 1&0&4
-\end{bmatrix} \\ 
+\end{bmatrix} \\
 \\
 x=\begin{bmatrix}
 x_{1} \\
@@ -455,7 +458,7 @@ Se il rango è inferiore al numero di incognite, il sistema ammette infinite sol
 -> rref(A | b) => NON ammette soluzioni se ultima riga e' 0=1
 => analisi colonne non tengono conto della colonna dei risultati => se almeno una colonna libera allora infinite soluzioni , se 0 colonne libere allora 1 sola soluzione
 
-quindi se rank=n 1 sola soluzione altrimenti n-r dove r e' numero parametri 
+quindi se rank=n 1 sola soluzione altrimenti n-r dove r e' numero parametri
 
 ### No solutions / Non invertible A
 
@@ -492,7 +495,7 @@ a_{0}+4a_{1}+16a_{2}=2 \\
 a_{0}+9a_{1}+81a_{2}=3 \\
 a_{0}+16a_{1}+256a_{2}=4
 \end{cases}
-\end{align} 
+\end{align}
 $$
 
 we then build the coefficients matrix:
@@ -527,8 +530,6 @@ x_{n-1}^0 & x_{n-1}^1 & x_{n-1}^2 & \dots & x_{n-1}^{n-1} \\
 \end{bmatrix}
 $$
 
-
-
 solving with $A^{-1} \cdot b$.
 
 $$
@@ -551,7 +552,7 @@ $$
 
 $Im(A)$ or $C(A)$ is the set of the destination vectors that have an $x$. All the LC of the LI column vectors of $A$.
 dimensione: $dim(Im(A)) = rank(A)$
-base di $Im(A)$:  vettori pivot di $rref(A)$
+base di $Im(A)$: vettori pivot di $rref(A)$
 
 ## Null Space
 
@@ -597,7 +598,7 @@ $$
 dimension: $dim(Ker(\hat{A})) = n - rank(\hat{A})$
 base: column vectors (s\[...], t\[...])
 
-## Pseudoinverse 
+## Pseudoinverse
 
 $$
 \hat{A}^+ = (\hat{A}^T \hat{A})^{-1} \hat{A}^T
@@ -655,7 +656,6 @@ $$
 \end{bmatrix}
 $$
 
-
 ---
 
 ## Use-cases
@@ -668,7 +668,7 @@ imposte cantonali $C$: 7% del profitto al netto delle imposte federali e delle i
 imposte federali $F$: 29% del profitto al netto delle imposte cantonali e delle imposte sui rifiuti
 imposta sullo smaltimento dei rifiuti $S$: 11% del profitto al netto delle imposte cantonali e federali
 
-1  definizione del problema
+1 definizione del problema
 
 $$
 \begin{align}
@@ -715,6 +715,3 @@ b = \begin{bmatrix}
 $$
 
 **se e solo se** $\det(A) \ne 0$, allora si puo' risolvere utilizzando $x = A^{-1} \cdot b$
-
-
-

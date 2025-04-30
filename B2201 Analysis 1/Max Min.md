@@ -1,8 +1,7 @@
 ---
 tags:
   - analysis
-lang:
-  - en
+lang: en
 ---
 
 ## Definition
@@ -23,7 +22,7 @@ se sale poi ha un tratto dritto = non strettamente, se sale e basta = strettamen
 
 ## How To
 
-Study sign using $f'$ and zeros of $f$ and $f'$. 
+Study sign using $f'$ and zeros of $f$ and $f'$.
 
 Punti critici:
 
@@ -48,7 +47,7 @@ $$
 
 def:
 
-se $f''(x_{0}) = 0$ e 
+se $f''(x_{0}) = 0$ e
 se $f''(x) < 0$ per $x < x_{0}$ e $f''(x) > 0$ per $x > x_{0}$
 oppure $f''(x) > 0$ per $x < x_{0}$ e $f''(x) < 0$ per $x > x_{0}$
 allora in $x0$ ho un flesso

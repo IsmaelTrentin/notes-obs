@@ -1,8 +1,7 @@
 ---
 tags:
   - discrete
-lang:
-  - en
+lang: en
 ---
 
 ## Basic Combinations
@@ -21,10 +20,9 @@ $$
 
 > $-1$ accounts for that combination's usage
 
-
 ## Number of Divisors of n
 
-To find the # of divisors of $n$ we firstly factor $n$. Then calculate the [[#Basic Combinations|combinations]] adding $1$ to each prime power. 
+To find the # of divisors of $n$ we firstly factor $n$. Then calculate the [[#Basic Combinations|combinations]] adding $1$ to each prime power.
 
 ### Example
 
@@ -87,5 +85,3 @@ $$
 n + k - 1 \\ k - 1
 \end{pmatrix}
 $$
-
-

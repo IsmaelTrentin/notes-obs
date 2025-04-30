@@ -1,8 +1,7 @@
 ---
 tags:
   - analysis
-lang:
-  - en
+lang: en
 ---
 
 ## Point Derivatives
@@ -29,7 +28,6 @@ $$
 
 Example of why $f'$ of a line is the slope of said line:
 
-
 $$
 \begin{align}
 f'(x_{0}) &= \lim_{ h \to 0 } \frac{m(x_{0} + h) + q - (mx_{0} + q)}{h} \\
@@ -52,7 +50,7 @@ $$
 Tangent line equation:
 
 $$
-t: y = f'(x_{0})\cdot(x - x_{0}) + f(x_{0}) 
+t: y = f'(x_{0})\cdot(x - x_{0}) + f(x_{0})
 $$
 
 or
@@ -68,7 +66,7 @@ TODO: transcribe derivate notevoli e regole derivazione
 ## L'Hopital Theorem
 
 $$
-\lim_{ x \to x_{0} } \frac{f(x)}{g(x)} = \lim_{ x \to x_{0} } \frac{f'(x)}{g'(x)} \dots 
+\lim_{ x \to x_{0} } \frac{f(x)}{g(x)} = \lim_{ x \to x_{0} } \frac{f'(x)}{g'(x)} \dots
 $$
 
 a condizione che esista il limite del quoziente delle derivate.
@@ -86,12 +84,12 @@ for limits with exp:
 $$
 \begin{gather}
 \lim_{ x \to 0^+ } x^x = \lim_{ x \to 0^+ } e^{x \ln x} \\
-\lim_{ x \to 0^+ } x\ln x = 0 
+\lim_{ x \to 0^+ } x\ln x = 0
 \end{gather}
 $$
 
 strat 2:
 
 $$
-\lim_{ x \to 0^+ } \times^x = L \implies \lim_{ x \to 0^+ } \ln(x^x) = \ln L  
+\lim_{ x \to 0^+ } \times^x = L \implies \lim_{ x \to 0^+ } \ln(x^x) = \ln L
 $$

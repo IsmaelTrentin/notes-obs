@@ -1,8 +1,7 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 $$
@@ -13,4 +12,3 @@ $$
 & ym/s= xkm/h \cdot \frac{5}{18}m/s
 \end{alignat*}
 $$
-

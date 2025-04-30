@@ -1,8 +1,7 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 refac
@@ -61,12 +60,11 @@ then each result in binary
 | 1   | 0   | 0   | 1   |
 | 1   | 0   | 0   | 0   |
 
-
 ## Errors
 
 refac
 
-ridondanza -> surplus di info che un codice ha per poter individuare errori 
+ridondanza -> surplus di info che un codice ha per poter individuare errori
 
 $$
 HD_{code} = d + 1
@@ -99,6 +97,7 @@ $$
 ## Examples
 
 consider:
+
 $$
 \begin{align}
 m&=5bit \\
@@ -131,9 +130,8 @@ $$
 calc $r_{i}$
 
 $$
-\begin{align} 
+\begin{align}
 r_{0}=m_{0} \oplus m_{1} \oplus m_{3} \oplus m_{4}\oplus m_{6} \\
 \dots \text{check slides}
 \end{align}
 $$
-

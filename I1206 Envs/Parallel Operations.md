@@ -1,8 +1,7 @@
 ---
 tags:
   - envs
-lang:
-  - en
+lang: en
 ---
 
 ## Run Commands In Parallel

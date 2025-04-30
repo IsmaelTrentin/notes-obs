@@ -1,8 +1,7 @@
 ---
 tags:
   - db
-lang:
-  - en
+lang: en
 ---
 
 ## Create Table
@@ -24,7 +23,7 @@ CREATE TABLE branch (
 	city       char(30),
 	assets     integer NOT NULL, /* assures value is not null            */
 	evaluation REAL,             /* floating point number                */
-	
+
 	PRIMARY KEY(name),           /* sets PK on field `name`              */
 	UNIQUE(city),                /* candidate key(s)                     */
 	CHECK(assets >= 0),          /* throws error if condition is not met */
@@ -84,4 +83,3 @@ For string comparisons use `LIKE`, if exact match is needed then `=`.
 `UNION ALL` keeps duplicates
 
 ### Join
-

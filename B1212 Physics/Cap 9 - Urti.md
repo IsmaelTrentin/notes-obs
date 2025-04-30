@@ -1,8 +1,7 @@
 ---
 tags:
   - physics
-lang:
-  - it
+lang: it
 ---
 
 ## Quantita' di Moto
@@ -11,7 +10,7 @@ $$
 \vec{p} = m\vec{v}~~~~[kg \cdot m/s]
 $$
 
-quindi 
+quindi
 
 $$
 \sum{\vec{F}} = \frac{\Delta \vec{p}}{\Delta t}
@@ -51,9 +50,9 @@ se le masse sono uguali:
 
 es: newton's cradle. la forza viene distribuita equamente
 
-### Anaelastici 
+### Anaelastici
 
-energia cinetica NON si conserva 
+energia cinetica NON si conserva
 
 $$
 \begin{align}

@@ -2,8 +2,7 @@
 tags:
   - algos
   - physics
-lang:
-  - it
+lang: it
 ---
 
 ## Cinetica
@@ -16,7 +15,7 @@ $$
 W_{tot} = \Delta K
 $$
 
-## Meccanica 
+## Meccanica
 
 $$
 E = U + K

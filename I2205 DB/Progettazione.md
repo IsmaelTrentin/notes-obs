@@ -1,17 +1,16 @@
 ---
 tags:
   - db
-lang:
-  - it
+lang: en
 ---
 
-- requisiti -> analisi removes interpretazione 
+- requisiti -> analisi removes interpretazione
 - requisiti funzionali -> operazioni sul db (interattive o batch)
 
 ## Analisi Requisiti
 
 - astrazione
-- standardizzazione  struttura frasi
+- standardizzazione struttura frasi
 - evitare complessita'
 - semplificare sinonimi / standardizzare termini
 - glossario
@@ -20,11 +19,11 @@ lang:
 ## ER
 
 RECT -> entity set
-ELLIPSE   -> entity set's attribute
-		-> composite
-		-> double: multiple values
-		-> dashed: derived (ie. age)
-		^ can stack (comp. & double)
+ELLIPSE -> entity set's attribute
+-> composite
+-> double: multiple values
+-> dashed: derived (ie. age)
+^ can stack (comp. & double)
 
 if attr is enum -> attr becomes entity with attr name and gets related to entity that should have said attr
 enum is ok only for values that will never change

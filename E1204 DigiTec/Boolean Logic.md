@@ -1,8 +1,7 @@
 ---
 tags:
   - digitec
-lang:
-  - en
+lang: en
 ---
 
 ## Minterms
@@ -46,4 +45,3 @@ $$
 ![axioms](../_cdn/digitec/boolean_axioms.png)
 
 > [[🚨]] **Shannon 1**: if $x$ inside $f$ is $\overline{x}$, then it becomes $\overline{0}$ which is $1$
-

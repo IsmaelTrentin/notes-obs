@@ -1,11 +1,10 @@
 ---
 tags:
   - discrete
-lang:
-  - en
+lang: en
 ---
 
-## Modular Arithmetics 
+## Modular Arithmetics
 
 ### Euclid Theorem
 
@@ -26,7 +25,7 @@ $$
 \end{align}
 $$
 
-### Congruency 
+### Congruency
 
 $$
 \begin{gather}
@@ -51,7 +50,7 @@ $$
 \end{gather}
 $$
 
-### Operations 
+### Operations
 
 In $\mathbb{Z}_{n}$:
 
@@ -67,7 +66,7 @@ $$
 
 #### moltiplicativo inverso:
 
-puo' non esistere, se esiste e' difficile da trovare. con i numeri primi tutti hanno un inverso moltiplicativo 
+puo' non esistere, se esiste e' difficile da trovare. con i numeri primi tutti hanno un inverso moltiplicativo
 
 example:
 
@@ -126,11 +125,9 @@ $$
 a^{-1} = k \text{ in } \mathbb{Z}_{n}
 $$
 
-
 ### Bezout Algo
 
 check slides 😭
-
 
 ## Legendre Algo
 
@@ -164,4 +161,5 @@ the steps required are:
 $$
 len(b_{2})
 $$
-[[🚨]]  starting from the LSB!
+
+[[🚨]] starting from the LSB!
