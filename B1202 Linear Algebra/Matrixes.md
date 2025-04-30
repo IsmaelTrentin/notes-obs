@@ -33,7 +33,7 @@ diagonale principale -> A11, A22, A33
 
 dimensione deve essere uguale
 comp + comp
-elemento neutro: matrice nulla {{0,0},{0,0}}
+elemento neutro: matrice nulla (all zeros)
 matrice opposta: tutti i segni flippati
 
 #### mult:
@@ -53,10 +53,16 @@ regola=> numero colonne prima = numero righe seconda
 ❌ COMMUTATIVO
 ✅ DISTRIBUTIVA
 
-elemento neutro:
-es: {{1,0},{0,1}}
-tutti 1 sulla diagonale, resto zero
-matrice di identita'
+elemento neutro: id matrix
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 & \dots \\
+0 & 1 & 0 & \dots \\
+0 & 0 & 1 & \dots \\
+\vdots & \vdots & \vdots & \ddots
+\end{bmatrix}
+$$
 
 #### inversa:
 
