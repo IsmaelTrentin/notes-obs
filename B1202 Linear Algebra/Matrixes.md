@@ -635,6 +635,27 @@ $$
 b - b' \implies \hat{A}^T \cdot (b - b') = \vec{0}
 $$
 
+## Derivation Matrix
+
+Derives any polynomial.
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\mapsto
+\begin{bmatrix}
+0 & 1 & 0 & 0 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 0 & 3 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+
+
 ---
 
 ## Use-cases

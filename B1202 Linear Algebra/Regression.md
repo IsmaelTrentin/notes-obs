@@ -167,3 +167,4 @@ That can be solved by approximating using regression:
 $$
 \vec{x} = (A^T A)^{-1} A^T \cdot \vec{b}
 $$
+
