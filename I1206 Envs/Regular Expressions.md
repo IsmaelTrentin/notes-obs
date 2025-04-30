@@ -1,7 +1,7 @@
 ---
 tags:
   - envs
-lang: en
+locale: en
 ---
 
 ## Tokens

@@ -1,7 +1,7 @@
 ---
 tags:
   - db
-lang: en
+locale: en
 ---
 
 ## Create Table

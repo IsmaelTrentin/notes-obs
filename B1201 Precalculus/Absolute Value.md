@@ -1,8 +1,9 @@
 ---
 tags:
   - precalculus
-lang: en
+locale: en
 ---
+
 ## Definition
 
 $$

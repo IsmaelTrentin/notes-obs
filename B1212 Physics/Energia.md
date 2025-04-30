@@ -2,7 +2,7 @@
 tags:
   - algos
   - physics
-lang: it
+locale: it
 ---
 
 ## Cinetica

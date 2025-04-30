@@ -1,7 +1,7 @@
 ---
 tags:
   - discrete
-lang: en
+locale: en
 ---
 
 ## Modular Arithmetics

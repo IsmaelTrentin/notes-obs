@@ -1,7 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang: en
+locale: en
 ---
 
 ## Example

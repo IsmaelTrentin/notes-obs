@@ -1,7 +1,7 @@
 ---
 tags:
   - digitec
-lang: en
+locale: en
 ---
 
 delay between I/O states changing

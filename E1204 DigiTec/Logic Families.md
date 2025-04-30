@@ -1,7 +1,7 @@
 ---
 tags:
   - digitec
-lang: en
+locale: en
 ---
 
 | Logic Family | $V_{DD}$        | $V_{IL}$ | $V_{IH}$ | $V_{OL}$ | $V_{OH}$ |

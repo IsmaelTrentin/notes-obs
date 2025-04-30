@@ -2,7 +2,7 @@
 tags:
   - physics
   - draft
-lang: it
+locale: it
 ---
 
 ## La fisica e le leggi della natura

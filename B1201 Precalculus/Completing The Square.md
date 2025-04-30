@@ -1,7 +1,7 @@
 ---
 tags:
   - precalculus
-lang: en
+locale: en
 ---
 
 We want to achieve for $a\not=0$:

@@ -1,7 +1,7 @@
 ---
 tags:
   - linear-algebra
-lang: en
+locale: en
 ---
 
 Let's define a function that maps $\mathbb{R}_{3} \to \mathbb{R}_{2}$. This is used to "project" a 3d space into a 2d plane. Altering the primitive vectors will alter all the points.

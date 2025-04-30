@@ -1,7 +1,7 @@
 ---
 tags:
   - analysis
-lang: en
+locale: en
 ---
 
 ## Circumference

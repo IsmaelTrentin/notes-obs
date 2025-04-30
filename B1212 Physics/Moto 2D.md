@@ -1,7 +1,7 @@
 ---
 tags:
   - physics
-lang: it
+locale: it
 ---
 
 ## Posizione in funzione del tempo

@@ -1,7 +1,7 @@
 ---
 tags:
   - discrete
-lang: en
+locale: en
 ---
 
 If you disconnect any edge, the graph becomes disconnect

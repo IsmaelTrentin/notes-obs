@@ -1,7 +1,7 @@
 ---
 tags:
   - digitec
-lang: en
+locale: en
 ---
 
 Bits are discrete values `[0,1]`

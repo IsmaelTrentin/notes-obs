@@ -1,7 +1,7 @@
 ---
 tags:
   - precalculus
-lang: en
+locale: en
 ---
 
 ## Line
