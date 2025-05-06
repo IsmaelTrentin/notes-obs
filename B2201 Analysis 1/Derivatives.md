@@ -63,7 +63,16 @@ where $m=f'(x_{0})$ and $q=-f'(x_{0})x_{0}+f(x_{0})$.
 
 TODO: transcribe derivate notevoli e regole derivazione
 
-## L'Hopital Theorem
+## L'Hopital Rule
+
+It is applicable when we have the indefinite forms:
+
+$$
+\frac{0}{0} \quad
+\frac{\infty}{\infty}
+$$
+
+Definition:
 
 $$
 \lim_{ x \to x_{0} } \frac{f(x)}{g(x)} = \lim_{ x \to x_{0} } \frac{f'(x)}{g'(x)} \dots
@@ -76,7 +85,7 @@ quindi se fai tutti i passaggi e poi esce qualcosa che non esiste allora il teor
 example:
 
 $$
-\lim_{ x \to \infty } \frac{e^x}{x^2} = \lim_{ x \to \infty } \frac{e^x}{3x^2} = \lim_{ x \to \infty } \frac{e^x}{6x} = \lim_{ x \to \infty } \frac{e^x}{6} = \infty
+\lim_{ x \to \infty } \frac{e^x}{x^3} = \lim_{ x \to \infty } \frac{e^x}{3x^2} = \lim_{ x \to \infty } \frac{e^x}{6x} = \lim_{ x \to \infty } \frac{e^x}{6} = \infty
 $$
 
 for limits with exp:
@@ -91,5 +100,5 @@ $$
 strat 2:
 
 $$
-\lim_{ x \to 0^+ } \times^x = L \implies \lim_{ x \to 0^+ } \ln(x^x) = \ln L
+\lim_{ x \to 0^+ } x^x = L \implies \lim_{ x \to 0^+ } \ln(x^x) = \ln L
 $$
