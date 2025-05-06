@@ -163,3 +163,56 @@ len(b_{2})
 $$
 
 [[🚨]] starting from the LSB!
+
+## Encoding
+
+Use ASCII code - 24 to get into $\mathbb{Z}_{27}$. Each letter code is a coefficient for a power of $27$.
+
+## Decoding
+
+Go back to $\mathbb{Z}_{27}$ using mod algo with $\mod 27$, the remainders are the letter codes.
+
+## Encryption
+
+$$
+x^{PB_{t}} \implies (x^{PB_{t}})^{PR_{t}} = x
+$$
+
+where $PB = \text{public key}, PR = \text{private key}, t = \text{target}, x = \text{message}$.
+
+## Decryption
+
+$$
+(x^{PB_{t}})^{{PR_{t}}} = x
+$$
+
+## Signing
+
+[[🚨]] this is clear text, it is not encrypted!
+
+$$
+s = x^{PR_{o}}
+$$
+
+where $s = \text{signed message}, o = \text{owner}$
+
+## Verify signature
+
+$$
+x = s^{PB_{o}} = (x^{PR_{o}})^{PB_{o}}
+$$
+
+## Summary
+
+where $x = \text{message}$ and sending message $a \mapsto b$
+
+| Operation                 |                                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------------- |
+| Encrypt                   | $x^{PB_{b}}$                                                                          |
+| Decrypt                   | $(x^{PB_{b}})^{PR_{b}}$                                                               |
+| Sign                      | $x^{PR_{a}}$                                                                          |
+| Check signature           | $(x^{PR_{a}})^{PB_{a}}$                                                               |
+| Sign + Encrypt            | $(x^{PR_{a}} \text{ in } \mathbb{Z}_{n_{a}})^{PB_{b}} \text{ in } \mathbb{Z}_{n_{b}}$ |
+| Decrypt + Check signature | $(x^{PR_{b}} \text{ in } \mathbb{Z}_{n_{b}})^{PB_{a}} \text{ in } \mathbb{Z}_{n_{a}}$ |
+
+check slides....
