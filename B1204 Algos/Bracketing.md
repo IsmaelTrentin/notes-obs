@@ -129,15 +129,15 @@ $$
 \lim_{ n \to \infty } |x_{n} - x^*| = 0
 $$
 
-### Tangente
+### Tangent
 
-forma generale rette:
+line generic form
 
 $$
 y = m(x - x_{0}) + y_{0}
 $$
 
-specifica per algo:
+for this algo:
 
 $$
 y = f'(x_{0})(x-x_{0})+f(x_{0})
@@ -151,13 +151,13 @@ $$
 x_{i} = x_{0} - \frac{f(x_{0})}{f'(x_{0})}
 $$
 
-retta che tocca (tange) una funzione in un singolo punto. e' una e una sola
+there exists one and only one tangent line for a point.
 
-algo con ricorsione grado 1
+1st degree recursion
 
-punti convergono verso $x^*$
+points converge towards $x^*$
 
-### derivata polinomi
+### Polynomial Derivative
 
 $$
 (f(x) + g(x))' = f'(x)+g'(x)
@@ -171,15 +171,13 @@ $$
 (x^7)' = 7x^6
 $$
 
-derivata di una costante = $0$
-
-Esempio:
+Example:
 
 $$
 \begin{align}
 f(x) &= 5x^2 + 7 & \\
-f(x) &= 5x^2 + 0 & \text{derivata 7 = 0 perche' const} \\
-f(x) &= 5 \cdot2 \cdot x + 0 & \text{3a regola}
+f(x) &= 5x^2 + 0 & \text{derivative 7 = 0 because const} \\
+f(x) &= 5 \cdot2 \cdot x + 0 & \text{3rd rule}
 \end{align}
 $$
 
