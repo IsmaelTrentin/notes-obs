@@ -166,7 +166,7 @@ $$
 
 ## Encoding
 
-Use ASCII code - 24 to get into $\mathbb{Z}_{27}$. Each letter code is a coefficient for a power of $27$.
+Use ASCII code - 24 to get into $\mathbb{Z}_{27}$. Each letter code is a coefficient for a power of $27$ form left to right. If the result is $\geq n$, we need to split the message to fit it inside $\mathbb{Z}_{n}$.
 
 ## Decoding
 
