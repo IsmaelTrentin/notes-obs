@@ -10,6 +10,24 @@ $$
 f(x) = y_{j} + \frac{y_{j + 1} - y_{j}}{x_{j + 1} - x_{j}}(x - x_{j}) \quad x \in [x_{j}, x_{j + 1}]
 $$
 
+### Quadratic Spline
+
+$$
+f_{i}(x) = \frac{z_{1 + 1} - z_{i}}{2(x_{1 + 1}) - x_{i}}(x - x_{i})^2 + z_{i}(x - x_{i}) + y_{i} 
+$$
+
+$z$ is obtained recursively 
+
+$$
+z_{i + 1} = -z_{i} + 2 \frac{y_{i + 1} - y_{i}}{x_{i + 1} - x_{i}}
+$$
+
+where:
+
+$$
+z_{0} = f'(x_{0})
+$$
+
 ## Polynomial
 
 ![[Pasted image 20250502154350.png]]
