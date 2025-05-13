@@ -166,11 +166,11 @@ $$
 
 ## Encoding
 
-Use ASCII code - 24 to get into $\mathbb{Z}_{27}$. Each letter code is a coefficient for a power of $27$ form left to right. If the result is $\geq n$, we need to split the message to fit it inside $\mathbb{Z}_{n}$.
+Use ASCII code - 64 to get into $\mathbb{Z}_{27}$. Each letter code is a coefficient for a power of $27$ form right to left, where LSC is power $0$ and MSC is power $len - 1$. If the result is $\geq n$, we need to split the message to fit it inside $\mathbb{Z}_{n}$.
 
 ## Decoding
 
-Go back to $\mathbb{Z}_{27}$ using mod algo with $\mod 27$, the remainders are the letter codes.
+Go back to $\mathbb{Z}_{27}$ using mod algo with $\mod 27$, the remainders are the letter codes. Where last remainder is MSC and first remainder is LSC, meaning the word is MSC...LSC.
 
 ## Encryption
 
