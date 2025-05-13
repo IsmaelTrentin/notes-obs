@@ -90,7 +90,6 @@ $$
 
 ## Integration Rules
 
-
 $$
 \begin{gather}
 f(x) = x^\alpha \quad \alpha \in \mathbb{R} \setminus \{-1\} \\
@@ -98,3 +97,46 @@ f(x) = x^\alpha \quad \alpha \in \mathbb{R} \setminus \{-1\} \\
 \end{gather}
 $$
 
+$$
+\int x^{-1}dx = \int \frac{1}{x}dx = \ln(|x|) + c \quad x \ne 0
+$$
+
+### Fractions
+
+example:
+
+$$
+\int \frac{3x^2 + 2}{x}dx = \int \left( \frac{3x^2}{x} + \frac{2}{x} \right) dx = 3 \int x dx + 2 \int \frac{1}{x} dx = \frac{3}{2}x^2 + 2 \ln(|x|) + c
+$$
+
+### e
+
+$$
+\int e^{2x}dx = \int \frac{2}{2}e^{2x}dx = \frac{1}{2} \int 2e^{2x}dx = \frac{1}{2} e^{2x} + c
+$$
+
+> $(e^{2x})' = 2e^{2x}$
+
+### Exp
+
+remembering that:
+
+$$
+\begin{align}
+(a^x)' = (e^{\ln a^x})' = (e^{x\ln a})' = e^{x\ln a}\cdot \ln a = e^{\ln a^x} \cdot \ln a = \ln a \cdot a^x
+\end{align}
+$$
+
+we have:
+
+$$
+\int a^x dx = \int \frac{\ln a}{\ln a} \cdot a^x dx = \frac{1}{\ln a} \int \ln a \cdot a^x dx = \frac{1}{\ln a} \cdot (a^x + c)
+$$
+
+## Substitution 
+
+$$
+\int t'(x) \cdot f(t(x)) dx = \int f(t) dt
+$$
+
+just try to have $\int t'(x) \text{ something with t(x)...}$ and then use substitution theorem ......
