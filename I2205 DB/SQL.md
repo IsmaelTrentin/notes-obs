@@ -82,4 +82,19 @@ For string comparisons use `LIKE`, if exact match is needed then `=`.
 `UNION` removes duplicates
 `UNION ALL` keeps duplicates
 
-### Join
+## Join
+
+...
+
+## Subqueries
+
+```sql
+SELECT branch_name, avg_balance
+FROM (
+	SELECT branch_name, avg(balance) as avg_balance
+	FROM account GROUP BY branch_name
+)
+WHERE avg_balance > 1200;
+```
+
+## Exists
