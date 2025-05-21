@@ -662,6 +662,65 @@ $$
 \end{bmatrix}
 $$
 
+## Eigenvectors
+
+Eigenvectors are non-null vectors that multiplied by a matrix $\hat{A}$, produce a multiple of said vector. Therefore it must satisfy the following equation:
+
+$$
+\hat{A}\vec{x} = \lambda\vec{x}
+$$
+
+A matrix can have **multiple eigenvectors**, therefore multiple eigenvalues. There are actually infinitely many eigenvectors if we count their multiples. 
+
+In general the non-multiple number $N$ of eigenvectors for a matrix is the number of columns.
+
+### Eigenvalues
+
+An eigenvalue is simply $\lambda$. See previous chapter [[#Eigenvectors]].
+
+For [[#mat triangolare|Triangular]] matrixes, the eigenvalues are the elements of the **main diagonal**.
+
+### Examples
+
+$$
+\begin{gather}
+\hat{A}\vec{x} = \lambda \vec{x} \\
+(\hat{A} - \lambda \hat{I})\vec{x} = \vec{0} \\
+\det(\hat{A} - \lambda \hat{I}) = 0 \quad \text{det=0 gives multiple sol.} \\
+
+\end{gather}
+$$
+
+if the matrix is invertible, then we would have only one single solution $\vec{x} = \vec{0}$. Since we want other solutions we then impose its [[Matrixes#Determinante]] to be zero.
+
+the following equation is the Characteristic Polynomial and its used to find the eigenvalues. These values reside in the roots of this polynomial.
+
+$$
+\det(\hat{A} - \lambda \hat{I}) = \vec{0} \implies \begin{bmatrix}
+a-\lambda &b \\
+c &d - \lambda
+\end{bmatrix}
+$$
+
+this produces the generalized Characteristic Polynomial:
+
+$$
+\lambda^2 - tr(\hat{A})\lambda  + \det(\hat{A})
+$$
+
+where $tr: \mathbb{R}^{m \times n} \mapsto \mathbb{R}$ is the function that sums the elements of the main diagonal.
+
+using the determinant formula, this will produce a polynomial of degree equals to the size of the matrix (square) where its roots are the eigenvalues for $\hat{A}$.
+
+To find the eigenvectors we build a system using the eigenvalues. For an hypothetical matrix $\hat{A}$ of size $2$ the following is valid:
+
+$$
+\begin{cases}
+ax_{1} + bx_{2} = \lambda x_{1}  \\
+cx_{1} + dx_{2} = \lambda x_{2}
+\end{cases}
+$$
+
 ---
 
 ## Use-cases
