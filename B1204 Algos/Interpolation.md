@@ -13,7 +13,7 @@ $$
 ### Quadratic Spline
 
 $$
-f_{i}(x) = \frac{z_{1 + 1} - z_{i}}{2(x_{1 + 1}) - x_{i}}(x - x_{i})^2 + z_{i}(x - x_{i}) + y_{i} 
+f_{i}(x) = \frac{z_{i + 1} - z_{i}}{2(x_{i + 1} - x_{i})}(x - x_{i})^2 + z_{i}(x - x_{i}) + y_{i} 
 $$
 
 $z$ is obtained recursively 
@@ -27,6 +27,20 @@ where:
 $$
 z_{0} = f'(x_{0})
 $$
+
+### Natural Cubic
+
+uses $z$ and $h$ as parameters to assure continuity for $f''$, where $f''(x_{0}) = z_{0} = 0$ and $f''(x_{n}) = z_{n} = 0$
+
+$$
+\begin{cases}
+h_{i - 1}z_{i - 1} + 2(h_{i - 1} + h_{i})z_{i} + h_{i}z_{i + 1} = 6\left( \frac{y_{i + 1} - y_{i}}{h_{i}} - \frac{y_{i} - y_{i - 1}}{h_{i - 1}}\right)
+\end{cases}
+$$
+
+> one case for each $z \setminus \{ z_{0}, z_{n} \}$ 
+
+
 
 ## Polynomial
 
