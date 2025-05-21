@@ -90,8 +90,39 @@ $$
 E = \frac{b}{1 - a} \quad a \ne 1
 $$
 
-giving the final solution:
+giving the final generic solution:
 
 $$
 x_{t} = E + a^t(x_{0} - E)
+$$
+
+## Dimension 2
+
+$$
+\begin{cases}
+\vec{x}_{0} = \vec{v} \\
+\vec{x}_{t + 1} = \hat{A}\vec{x}_{t} + \vec{b}
+\end{cases}
+$$
+
+when $\vec{b} = \vec{0}$, its a closed system, meaning that there is no loss nor gain therefore the sum of the components of $\vec{x}_{t}$ will always be equal to the sum of the components of $\vec{x}_{0}$.
+
+when $\vec{b} \ne \vec{0}$, its an open system, meaning that there is variation.
+
+to get $x_{t - 1}$ invert the system law:
+
+$$
+\hat{A}^{-1} \cdot x_{t} - \hat{A}^{-1} \cdot \vec{b} = x_{t - 1}
+$$
+
+the equilibrium then becomes:
+
+$$
+\vec{E} = (\hat{I} - \hat{A})^{-1} \cdot \vec{b}
+$$
+
+the general form is then:
+
+$$
+\vec{x}_{t} = \vec{E} + \hat{A}^t(\vec{x}_{0} - \vec{E})
 $$
