@@ -73,3 +73,37 @@ quindi per cripto useremo:
 E(<primo della forma di p>, e bho non ha spiegato)
 ```
 
+to check if $k$ is quadratic residue:
+
+$$
+\iff k^{(p - 1)/2} = 1 \mod p
+$$
+
+a generator point is a point where its multiples cover the entire $\mathbb{Z}_{p}$ set.
+
+## Public and Private
+
+Given $p, a, b, G$:
+
+- $d$ is the private key
+- $H = d \cdot G$ is the public key
+
+thanks to the generator:
+
+$$
+\begin{gather}
+d_{B}H_{A} = d_{B}d_{A}G \\
+d_{A}H_{B} = d_{A}d_{B}G
+\end{gather}
+$$
+
+therefore:
+
+$$
+d_{B}H_{A} = d_{A}H_{B} = S
+$$
+
+## Encrypt
+
+Alice sends $Q = P + S$ to Bob and Bob calculates $P = Q - S$.
+
