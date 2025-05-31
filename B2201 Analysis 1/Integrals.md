@@ -168,6 +168,15 @@ $$
 \end{gather}
 $$
 
+Remember:
+
+$$
+\begin{gather}
+\left( \frac{1}{x} \right)' = -\frac{1}{x^2} \\
+\left( \frac{1}{(x + 1)} \right)' = -\frac{1}{(x + 1)^2}
+\end{gather}
+$$
+
 ## Rational Functions
 
 check photo gallery
