@@ -126,3 +126,35 @@ the general form is then:
 $$
 \vec{x}_{t} = \vec{E} + \hat{A}^t(\vec{x}_{0} - \vec{E})
 $$
+
+### System Behaviour
+
+When $(\hat{I} - \hat{A})$ is invertible, the [[Matrixes#Eigenvalues]] are LI. Therefore we can define $(\vec{x}_{0} - \vec{E})$ as a linear combination of $v_{1}, v_{2}$. Giving us the following expression:
+
+$$
+\vec{x}_{t} = \vec{E} + \hat{A}^t(c_{1}\vec{v}_{1} + c_{2} \vec{v}_{2}) = \vec{E} + c_{1}\hat{A}^t\vec{v}_{1} + c_{2}\hat{A}^t\vec{v}_{2}
+$$
+
+where in terms of $\lambda$ becomes:
+
+$$
+\vec{x}_{t} = \vec{E} + c_{1}\lambda_{1}^t\vec{v}_{1} + c_{2}\lambda_{2}^t\vec{v}_{2}
+$$
+
+By defining it in terms of $\lambda$, we can easily study the behavior of the system as $t \rightarrow +\infty$.
+
+To find the linear combination we can either use the RREF:
+
+$$
+RREF(\begin{bmatrix}
+v_{1a} & v_{2a} & (\vec{x}_{0} - \vec{E})_{a}  \\
+v_{1b} & v_{2b} & (\vec{x}_{0} - \vec{E})_{b} 
+\end{bmatrix})
+$$
+
+or the matrix that holds $\vec{v}_{1}, \vec{v}_{2}$:
+
+$$\begin{bmatrix}
+\vec{v}_{1a} & \vec{v}_{2a} \\
+\vec{v}_{1b} & \vec{v}_{2b}
+\end{bmatrix}^{-1} \cdot (\vec{x}_{0} - \vec{E})$$
