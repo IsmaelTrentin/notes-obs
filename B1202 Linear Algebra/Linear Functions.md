@@ -26,6 +26,8 @@ $f(\vec{x}) = A\vec{x}$
 se voglio sapere la settimana $10$: $f(\vec{x_{0}}) = A^{10}\vec{x_{0}}$
 perche': $x_{1} = Ax_{0}; x_{2} = Ax_{1} = (AA)x_{0}$
 
+per iterazioni precedenti: $x_{j-1} = \hat{A}^{-1} \cdot (x_j - b)$
+
 dato output voglio risultato: $\vec{x} = A^{-1}\cdot\text{output}$
 
 $f(\begin{bmatrix}1\\0\end{bmatrix})$ selects the first column vector while $f(\begin{bmatrix}0\\1\end{bmatrix})$, in general:
