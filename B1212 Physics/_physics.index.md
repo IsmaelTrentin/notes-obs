@@ -1,7 +1,7 @@
 ---
 tags:
   - index
-last-edited: 2024-10-21
+last-edited: 2025-09-14
 ---
 
 ## Sources
@@ -14,16 +14,10 @@ last-edited: 2024-10-21
 [[Caduta Libera]]
 [[Moto 2D]]
 [[Moto Del Proiettile]]
-## Chapters
-
-### Cinematica 1D
-
-![[Cinematica 1D]]
-
-### Vettori
-
-![[Vectors]]
-
-### Moto 2D
-
-![[Moto 2D]]
+[[Moto Circolare]]
+[[Forza]]
+[[Lavoro]]
+[[Energia]]
+[[Cap 9 - Urti]]
+[[Potenza]]
+[[Corde]]

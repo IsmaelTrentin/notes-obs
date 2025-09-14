@@ -1,7 +1,7 @@
 ---
 tags:
   - index
-last-edited: 2024-11-12
+last-edited: 2025-09-14
 ---
 
 ## Sources
@@ -9,17 +9,10 @@ last-edited: 2024-11-12
 [[Vectors]]
 [[Vectorial Geometry]]
 [[Matrixes]]
+[[Linear Functions]]
+[[Geometric Transformations]]
+[[Axonometry]]
+[[Linear Correlation Coef.]]
+[[Discrete Dynamic Systems]]
+[[Regression]]
 
-## Chapters
-
-### [[Vectors]]
-
-![[Vectors]]
-
-### Vectorial Geometry
-
-![[Vectorial Geometry]]
-
-### Matrixes
-
-![[Matrixes]]

@@ -1,19 +1,12 @@
 ---
 tags:
   - index
-  - todo
-last-edited: 2024-10-14
+last-edited: 2025-09-14
 ---
 
 ## Sources
 
 [[Absolute Value]]
 [[Lines]]
-todo: curves
-todo: functions
-todo: functions graph manipulations
-todo: polynomials 
-
-## Chapters
-
-![[Lines]]
+[[Trigonometry]]
+[[Completing The Square]]
