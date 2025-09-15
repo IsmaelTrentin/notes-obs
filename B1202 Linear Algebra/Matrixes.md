@@ -664,13 +664,13 @@ $$
 
 ## Eigenvectors
 
-Eigenvectors are non-null vectors that multiplied by a matrix $\hat{A}$, produce a multiple of said vector. Therefore it must satisfy the following equation:
+Eigenvectors are non-null vectors that multiplied by a square matrix $\hat{A}$, produce a multiple of said vector. Therefore it must satisfy the following equation:
 
 $$
 \hat{A}\vec{x} = \lambda\vec{x}
 $$
 
-A matrix can have **multiple eigenvectors**, therefore multiple eigenvalues. There are actually infinitely many eigenvectors if we count their multiples. 
+A square matrix can have **multiple eigenvectors**, therefore multiple eigenvalues. There are actually infinitely many eigenvectors if we count their multiples. 
 
 In general the non-multiple number $N$ of eigenvectors for a matrix is the number of columns.
 
@@ -693,7 +693,7 @@ $$
 
 if the matrix is invertible, then we would have only one single solution $\vec{x} = \vec{0}$. Since we want other solutions we then impose its [[Matrixes#Determinante]] to be zero.
 
-the following equation is the Characteristic Polynomial and its used to find the eigenvalues. These values reside in the roots of this polynomial.
+the following equation is the Characteristic Polynomial and its used to find the eigenvalues. 
 
 $$
 \det(\hat{A} - \lambda \hat{I}) = \vec{0} \implies \begin{bmatrix}
@@ -702,11 +702,17 @@ c &d - \lambda
 \end{bmatrix}
 $$
 
-this produces the generalized Characteristic Polynomial:
+this produces the generalized Characteristic Polynomial; the eigenvalues reside in the **roots** of this polynomial.
 
 $$
 \lambda^2 - tr(\hat{A})\lambda  + \det(\hat{A})
 $$
+
+> if the power of $\lambda$ is odd, then its sign will be negative
+
+> $tr(\hat{A}) = \sum\text{eigenvalues}$
+
+> $\det(\hat{A}) = \prod\text{eigenvalues}$
 
 where $tr: \mathbb{R}^{m \times n} \mapsto \mathbb{R}$ is the function that sums the elements of the main diagonal.
 
@@ -719,6 +725,34 @@ $$
 ax_{1} + bx_{2} = \lambda x_{1}  \\
 cx_{1} + dx_{2} = \lambda x_{2}
 \end{cases}
+$$
+
+### Eigenspaces
+
+Let $\lambda$ be an [[#Eigenvalues|eigenvalue]] of $\hat{A}$. The Eigenspace of $\lambda$ is:
+
+$$
+E_{\lambda} = \{ \vec{v} ~ | ~ \hat{A}\vec{v} = \lambda \vec{v} \}
+$$
+
+$$
+E_{\lambda} = \text{ker}(\hat{A} - \lambda \hat{I})
+$$
+
+$$
+E_{17} = <\begin{pmatrix}
+1 \\ 0 \\0
+\end{pmatrix}, \begin{pmatrix}
+0\\1\\0
+\end{pmatrix}>
+$$
+
+la moltiplicita' geometrica di lambda e' dim(E_lambda)
+
+la moltiplicita' algebrica di lambda e' la motleplicita' di lambda come zero del polinomio caretteristico: (l-2)^4\*(l-5)^3\*l -> ma(2) = 4, ma(5) = 3, ma(0) = 1
+
+$$
+1 \leq \text{mg}(\lambda) \leq \text{ma}(\lambda)
 $$
 
 ---
