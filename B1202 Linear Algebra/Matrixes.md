@@ -186,7 +186,7 @@ implies that there is no other matrix that multiplied with this one gives an Id 
 
 ## Determinante
 
-Per matrici quadrate $n \times n$
+Per matrici quadrate $n \times n \quad n=2$ 
 
 $$
 ad - bc
@@ -727,6 +727,12 @@ cx_{1} + dx_{2} = \lambda x_{2}
 \end{cases}
 $$
 
+If we know that $\lambda \neq 0$ and $\lambda \in S_{\hat{A}}$:
+
+$$
+\lambda \in S_{\hat{A}} \implies \frac{1}{\lambda} \in S_{\hat{A}^{-1}}
+$$
+
 ### Eigenspaces
 
 Let $\lambda$ be an [[#Eigenvalues|eigenvalue]] of $\hat{A}$. The Eigenspace of $\lambda$ is:
@@ -753,6 +759,21 @@ la moltiplicita' algebrica di lambda e' la motleplicita' di lambda come zero del
 
 $$
 1 \leq \text{mg}(\lambda) \leq \text{ma}(\lambda)
+$$
+
+Using the following property:
+
+$$
+\begin{align}
+\hat{A}\vec{w} &= \lambda \vec{w} \\
+\hat{A}^2\vec{w} &= \lambda^2\vec{w}
+\end{align}
+$$
+
+we then know that the vectorial space $W$ for a given eigenspace for $\lambda$ **does not change**.
+
+$$
+E_{\lambda} = W \quad E_{\lambda^2} = W 
 $$
 
 ---
