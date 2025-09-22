@@ -705,7 +705,7 @@ $$
 this produces the generalized Characteristic Polynomial; the eigenvalues reside in the **roots** of this polynomial.
 
 $$
-\lambda^2 - tr(\hat{A})\lambda  + \det(\hat{A})
+P(\lambda) = \lambda^2 - tr(\hat{A})\lambda  + \det(\hat{A})
 $$
 
 > if the power of $\lambda$ is odd, then its sign will be negative
@@ -753,13 +753,20 @@ E_{17} = <\begin{pmatrix}
 \end{pmatrix}>
 $$
 
-la moltiplicita' geometrica di lambda e' dim(E_lambda)
+### Properties
 
-la moltiplicita' algebrica di lambda e' la motleplicita' di lambda come zero del polinomio caretteristico: (l-2)^4\*(l-5)^3\*l -> ma(2) = 4, ma(5) = 3, ma(0) = 1
+#### Multiplicity
+
+The algebraical multiplicity of $\lambda$ is the zero multiplicity in $P(\lambda)$.
+The geometrical multiplicity  of $\lambda$ is $dim(E_{\lambda})$.
+
+the following is also valid:
 
 $$
 1 \leq \text{mg}(\lambda) \leq \text{ma}(\lambda)
 $$
+
+#### Power rule
 
 Using the following property:
 
@@ -775,6 +782,38 @@ we then know that the vectorial space $W$ for a given eigenspace for $\lambda$ *
 $$
 E_{\lambda} = W \quad E_{\lambda^2} = W 
 $$
+
+## Diagonal Matrices
+
+Diagonal matrices are filled with zeroes except for the elements on the main diagonal.
+
+Let $\hat{D}$ be a diagonal square matrix $n \times n$.
+
+$$\hat{D} = \text{diag}(\lambda_{1}, \dots, \lambda_{n})$$
+
+the [[#Eigenvalues]] of $\hat{D}$ are $\lambda_{1},\dots,\lambda_{n}$ and the [[#Eigenvectors]] are the column vectors of $\hat{D}$.
+
+## Similar Matrices
+
+$$
+\hat{A} \sim \hat{B} \iff \exists \hat{S} : \hat{A} = \hat{S} \hat{B} \hat{S}^{-1}
+$$
+
+The $\sim$ operator is an equivalence operator with the following properties:
+
+1. $\hat{A} \sim \hat{A}$ reflectivity 
+2. $\hat{A} \sim \hat{B} \implies \hat{B} \sim \hat{A}$ symmetricity
+3. $\hat{A} \sim \hat{B} \quad \hat{B} \sim \hat{C} \implies \hat{A} \sim \hat{C}$ transitivity
+
+Similar matrices **have identical** [[#Eigenvalues]]. Meaning that:
+
+if $\hat{A} \sim \hat{B}$ and $\vec{v}$ is an [[#Eigenvectors]] of $\hat{B}$, then $\hat{S}\vec{v}$ is an eigenvector of $\hat{A}$.
+
+### Diagonalization
+
+A square matrix $\hat{A}$ is diagonalizable if it is similar to a diagonal matrix $\hat{D}$, that is if there exists an invertible matrix $\hat{S}$ such that $\hat{A} = \hat{S} \hat{D} \hat{S}^{-1}$.
+
+[[👁️]] If $ma(\lambda_{n}) \neq mg(\lambda_{n})$, the matrix is **not** diagonalizable.
 
 ---
 
