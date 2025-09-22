@@ -20,24 +20,27 @@ int sum(int[] A, int n) {
 
 Spatial analysis:
 
+```txt
 A -> n
 n -> 1
 \--- input
 s -> 1
 i -> 1
+```
 
 Time analysis:
 
+```text
 s=0 -> 1
 for... -> 1+ n+1 + n = 2n + 2
 s+=... -> 1\*n
 return s -> 1
 tot = 3n + 4 -> $O(n)$
+```
 
 ## Order of Growth
 
-In algorithm analysis, we care about how the running time scales with
-input size, not the exact number of operations.
+In algorithm analysis, we care about how the running time scales with input size, not the exact number of operations.
 
 It is therefore beneficial to use the asymptotic notation
 
@@ -48,21 +51,86 @@ It is therefore beneficial to use the asymptotic notation
 | $\Theta()$ | theta, function average bound   |
 ### Big-O
 
-The running time $T(n)$ is $O(f(n))$ $\iff$ there exist $n_{0} \geq 0$ and $c > 0$ such that $T(n) \leq c \cdot f(n) \forall n \geq n_{0}$.
+Let $T(n)$ be the running time and $O(f(n))$ the asymptotic behavior of the algorithm:
 
-![[big_O.png]]
+$$
+T(n) = O(f(n)) \iff \exists \{ ~n_{0} \geq 0;~ c > 0 \} ~:~ T(n) \leq c \cdot f(n) ~~\forall~n \geq n_{0}
+$$
+
+#### Example
+
+Let
+
+$$
+T(n) = 3n^2 + 10n + 5
+$$
+
+Show that $T(n) = O(n^2)$.
+
+$$
+\begin{align}
+T(n) &= 3n^2 + 10n + 5 \\
+&\leq 3n^2 + 10n^2 + 5n^2 \quad \text{for } ~n \geq 1~ \text{ we have } ~n \leq n^2~ \text{ and } ~1 \leq n^2\\
+&= 18n^2
+\end{align}
+$$
+
+Therefore we can pick $c = 18$ and $n_{0} = 1$ and conclude that $T(n) = O(n^2)$.
 
 ## Big-Omega
 
-The running time $T(n)$ is $\Omega(f(n))$ $\iff$ there exist $n_{0} \geq 0$ and $c > 0$ such that $T(n) \geq c \cdot f(n) \forall n \geq n_{0}$.
+Let $T(n)$ be the running time and $\Omega(f(n))$ the asymptotic behavior of the algorithm:
 
-![[big_Omega.png]]
+$$
+T(n) = \Omega(f(n)) \iff \exists \{ ~n_{0} \geq 0;~ c > 0 \} ~:~ T(n) \geq c \cdot f(n) ~~\forall~n \geq n_{0}
+$$
 
-### Theta
+#### Example
 
-The running time $T(n)$ is $\Theta(f(n))$ $\iff$ there exist $n_{0} \geq 0$ and $c_{1},c_{2} > 0$ such that $c_{1} \cdot  f(n) \leq T(n) \geq c_{2} \cdot f(n) \forall n \geq n_{0}$.
+Let
 
-![[big_Theta.png]]
+$$
+T(n) = 7n + 20
+$$
+
+Show that $T(n) = \Omega(n)$.
+
+$$
+T(n) = 7n + 20 \geq 7n \quad \text{for any } ~n \geq 1
+$$
+
+Thus we can choose $c = 7$ and $n_{0} = 1$ and conclude $T(n) = \Omega(n)$.
+
+### Big-Theta
+
+Let $T(n)$ be the running time and $\Theta(f(n))$ the asymptotic behavior of the algorithm:
+
+$$
+T(n) = \Theta(f(n)) \iff \exists \{ ~n_{0} \geq 0;~ c_{1},c_{2} > 0 \} ~:~ c_{1} \cdot f(n) \leq T(n) \geq c_{2} \cdot f(n) ~~\forall~n \geq n_{0}
+$$
+
+#### Example
+
+Let
+
+$$
+T(n) = n^2 + 5n
+$$
+
+Show that $T(n) = \Theta(n^2)$.
+
+Pick $c_{1} = 1, c_{2}=2$ and consider $n \geq 5$.
+
+$$
+\begin{align}
+\text{Lower bound: } &\quad T(n) = n^2 + 5n \geq n^2 = c_{1}n^2 \\
+\text{Upper bound: } &\quad T(n) = n^2 + 5n \leq n^2 + n^2 = 2n^2 = c_{2}n^2
+\end{align}
+$$
+
+> because $5n \leq n^2 \iff n \geq 5$
+
+Therefore, with $c_{1} = 1, c_{2} = 2, n_{0} = 5$, we have $T(n) = \Theta(n^2)$.
 
 ### Properties
 
