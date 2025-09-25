@@ -815,6 +815,12 @@ A square matrix $\hat{A}$ is diagonalizable if it is similar to a diagonal matri
 
 [[👁️]] If $ma(\lambda_{n}) \neq mg(\lambda_{n})$, the matrix is **not** diagonalizable.
 
+We can then express $\hat{A}^{-1}$ in terms of $\hat{S}$ and $\hat{D}$ as following:
+
+$$
+\hat{A}^{-1} = \hat{S} \hat{D}^{-1} \hat{S}^{-1}
+$$
+
 ---
 
 ## Use-cases
