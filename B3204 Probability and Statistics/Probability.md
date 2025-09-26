@@ -77,3 +77,10 @@ $$
 P(MA) = P(MA | F_{1}) \cdot P(F_{1}) + \dots + P(MA | F_{n}) \cdot P(F_{n})
 $$
 
+## Bayes
+
+Given $P(MA | I)$ we can obtain $P(I | MA)$ using Bayes' theorem as follows:
+
+$$
+P(I | MA) = P(MA | I) \cdot \frac{P(I)}{P(MA)}
+$$
