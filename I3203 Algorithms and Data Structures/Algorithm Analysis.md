@@ -23,7 +23,7 @@ Spatial analysis:
 ```txt
 A -> n
 n -> 1
-\--- input
+--- input
 s -> 1
 i -> 1
 ```
@@ -33,16 +33,16 @@ Time analysis:
 ```text
 s=0 -> 1
 for... -> 1+ n+1 + n = 2n + 2
-s+=... -> 1\*n
+s+=... -> 1*n
 return s -> 1
-tot = 3n + 4 -> $O(n)$
+tot = 3n + 4 -> O(n)
 ```
 
 ## Order of Growth
 
 In algorithm analysis, we care about how the running time scales with input size, not the exact number of operations.
 
-It is therefore beneficial to use the asymptotic notation
+It is therefore beneficial to use the asymptotic notation.
 
 | notation   | description                     |
 | ---------- | ------------------------------- |
@@ -77,7 +77,7 @@ $$
 
 Therefore we can pick $c = 18$ and $n_{0} = 1$ and conclude that $T(n) = O(n^2)$.
 
-## Big-Omega
+### Big-Omega
 
 Let $T(n)$ be the running time and $\Omega(f(n))$ the asymptotic behavior of the algorithm:
 
@@ -152,3 +152,210 @@ $$
 f(n) = O(g(n)) \implies g(n) = \Omega(f(n))
 $$
 
+## Examples
+
+### 1
+
+Given the following code, analyze the time complexity of this algorithm:
+
+```c
+int sum(int A[], int n) {
+	int S = 0;
+	
+	for(int i = 0; i < n; i++){ // O(n)
+		S += A[i]; // O(1)
+	}
+	
+	return S;
+}
+```
+
+The loop will end when $i = n$. Therefore we can compute the total amount for the inner operations giving us the final result of:
+
+$$
+n \cdot 1 = n \implies O(n)
+$$
+
+### 2
+
+Given the following code, analyze the time complexity of this algorithm:
+
+```c
+int n; // input
+for(int i = 1; i < n; i = i * 2){
+	// smt
+}
+```
+
+Let us create a table to list all iterations:
+
+| it  | $i$     |
+| --- | ------- |
+| 0   | $1$     |
+| 1   | $2$     |
+| 2   | $2^2$   |
+| $k$ | $2^{k}$ |
+
+We then need to identify when the iterations will end:
+
+$$
+\begin{align}
+i &< n \\
+2^k &< n \\
+k &< \log_{2}n
+\end{align}
+$$
+
+Giving us a time complexity of:
+
+$$
+O(\log_{2}n)
+$$
+
+### 3
+
+Given the following code, analyze the time complexity of this algorithm:
+
+```c
+int n; // input
+for(int i = n; i >= 1; i = i / 2){
+	// smt
+}
+```
+
+Let us create a table to list all iterations:
+
+| it  | $i$                   |
+| --- | --------------------- |
+| 0   | $n$                   |
+| 1   | $\frac{n}{2}$         |
+| 2   | $\frac{n}{2 \cdot 2}$ |
+| $k$ | $\frac{n}{2^k}$       |
+Let's identify when the iterations stop and find the condition for that to happen:
+
+$$
+i \geq 1 \implies i < 1
+$$
+
+We now know that $i = \frac{n}{2^k}$ therefore we can substitute for that and obtain the following inequation:
+
+$$
+\begin{align}
+1 &> \frac{n}{2^k} \\
+2^k &> n \\
+k &> \log_{2}n
+\end{align}
+$$
+
+Giving us the time complexity of:
+
+$$
+O(\log_{2}n)
+$$
+### 4
+
+Given the following code, analyze the time complexity of this algorithm:
+
+```java
+int n; // input
+for(int i = 1; i * i < n; i++) {
+	// smt
+}
+```
+
+Let us create a table to list all iterations:
+
+| it  | $i$   | $i^2$       |
+| --- | ----- | ----------- |
+| 0   | $1$   | $1$         |
+| 1   | $2$   | $2^2$       |
+| 2   | $3$   | $3^2$       |
+| $k$ | $k+1$ | $(k + 1)^2$ |
+
+Let's identify when the iterations stop and find the condition for that to happen:
+
+$$
+i^2 < n \implies i^2 \geq n
+$$
+
+Now that we know the stop condition, we can use the generic $k$ iteration to identify our time complexity. Therefore, we can express $i$ in terms of $k$ knowing that $i^2 = (k + 1)^2$:
+
+$$
+\begin{align}
+(k + 1)^2 &\geq n \\
+k^2 + 2k + 1 &\geq n \\
+k^2 &\geq n \quad k^2 \text{ dominates}\\
+k &\geq \sqrt{ n }
+\end{align}
+$$
+
+> we can also think about letting $k \to \infty$ and observe that $k^2$ dominates over all the remaining factors.
+
+Resulting in the following time complexity:
+
+$$
+O(\sqrt{ n })
+$$
+
+## Recursion Examples
+
+### Factorial
+
+Given the following code, analyze the time complexity of this algorithm:
+
+```java
+int fact(int n) {
+	if (n == 0) {
+		return 1;
+	}
+	
+	return n * fact(n - 1);
+}
+```
+
+We can start by expressing our time analysis in a function $T(n)$:
+
+$$
+T(n) = 
+\begin{cases}
+1 &\quad n = 0 \\
+c + T(n - 1) &\quad n > 0, c \in \mathbb{N}
+\end{cases}
+$$
+
+> $c$ denotes an arbitrary unit of time for a given operation. We can also substitute it for $1$.
+
+Let us now iterate the algorithm:
+
+$$
+\begin{align}
+T(1) &= c \\
+T(n) &= c + T(n - 1) \\
+T(n - 1) &= c + (c + T(n - 2)) = 2c + T(n - 2) \\
+&~\vdots \\
+&= ic + T(n - i) 
+\end{align}
+$$
+
+We now need to identify our termination condition:
+
+$$
+n - i = 1 \iff i = n - 1
+$$
+
+Knowing the condition we can now substitute and simplify the expression:
+
+$$
+\begin{align}
+(n - 1)c + T(1)  \\
+= (n - 1)c + c  \\
+= cn - c + c \\
+= c \cdot n
+\end{align}
+$$
+
+Resulting in our time complexity:
+
+$$
+O(c \cdot n) \implies O(n)
+$$
