@@ -152,6 +152,61 @@ $$
 f(n) = O(g(n)) \implies g(n) = \Omega(f(n))
 $$
 
+
+## Master Theorem
+
+### Decreasing Functions
+
+$$
+\begin{align}
+&T(n) = a \cdot T(n - b) + f(n) \\[6pt]
+a > 0&\text{ number of recursive calls} \\
+b > 0 &\text{ decrement constant of the input size} \\
+f(n) = O(n^k) &\text{ computational complexity of non-recursive part}
+\end{align}
+$$
+
+giving us the following 3 cases:
+
+$$
+\begin{align}
+\begin{cases}
+O(n^{k+1}) \text{ or } O(n \cdot f(n)) &\quad a = 1 \\[6pt]
+O(n^k \cdot a^{n/b}) &\quad a > 1 \\[6pt]
+O(n^k) &\quad a < 1
+\end{cases}
+\end{align}
+$$
+
+### Dividing Functions
+
+$$
+\begin{align}
+&T(n) = a \cdot T\left( \frac{n}{b} \right) + f(n) \\
+a \geq 1 &\text{ number of recursive calls} \\
+b > 1 &\text{ dividing constant of the input size} \\
+f(n) = O(n^k \log^p n) &\text{ computational complexity of non-recursive part}
+\end{align}
+$$
+
+where $k$ and $p$ must be found to achieve equality to $f(n)$, meaning: $f(n) = O(n^k \log^p n)$.
+
+giving us the following 3 cases:
+
+$$
+\begin{cases}
+  \begin{cases}
+    O(n^k \log^{p+1} n), & p > -1, \\[6pt]
+    O(n^k \log \log n),  & p = -1, \\[6pt]
+    O(n^k),              & p < -1,
+  \end{cases} & \log_b a = k \\[16pt]
+  \begin{cases}
+    O(n^k \log^p n),~~~~ & p \ge 0, \\[6pt]
+    O(n^k),          & p < 0,
+  \end{cases} & \log_b a < k
+\end{cases}
+$$
+
 ## Examples
 
 ### 1
@@ -297,9 +352,9 @@ $$
 O(\sqrt{ n })
 $$
 
-## Recursion Examples
+### Recursion Examples
 
-### Factorial
+#### Factorial
 
 Given the following code, analyze the time complexity of this algorithm:
 
@@ -337,7 +392,7 @@ T(n - 1) &= c + (c + T(n - 2)) = 2c + T(n - 2) \\
 \end{align}
 $$
 
-We now need to identify our termination condition:
+We now need to identify our ending condition:
 
 $$
 n - i = 1 \iff i = n - 1
@@ -358,4 +413,29 @@ Resulting in our time complexity:
 
 $$
 O(c \cdot n) \implies O(n)
+$$
+
+
+### Master Theorem
+
+#### Fibonacci
+
+To use the [[#Master Theorem]] on the Fibonacci serie, we can apply an approximation to achieve the [[#Decreasing Functions]] form of the theorem.
+
+$$
+T(n) = \begin{cases}
+0 &\quad n = 0 \\[6pt]
+1 &\quad n = 1 \\[6pt]
+T(n-1) + T(n-2) &\quad n \geq 2
+\end{cases}
+$$
+
+we can say that
+
+$$
+\begin{align}
+T(n - 2) &~\leq~ T(n - 1) \\
+T(n) &~\leq~ 2 \cdot T(n-1) + 1
+
+\end{align}
 $$
