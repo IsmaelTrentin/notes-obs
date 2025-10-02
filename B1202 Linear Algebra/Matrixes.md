@@ -793,6 +793,30 @@ $$\hat{D} = \text{diag}(\lambda_{1}, \dots, \lambda_{n})$$
 
 the [[#Eigenvalues]] of $\hat{D}$ are $\lambda_{1},\dots,\lambda_{n}$ and the [[#Eigenvectors]] are the column vectors of $\hat{D}$.
 
+Diagonal matrices also benefit from the following power property:
+
+$$
+\hat{D}^n = \begin{bmatrix}
+a^n &0 &0 &\dots \\
+0 &b^n &0 &\dots \\
+0 &0 &c^n &\dots \\
+\vdots &\vdots &\vdots &\ddots
+\end{bmatrix}
+$$
+
+### Exponentials
+
+Let $\hat{D}$ be a diagonal matrix $n \times n$ where $n = 2$:
+
+$$
+e^{\hat{D}} = \begin{bmatrix}
+e^{\lambda} &0 \\
+0 &e^{\mu}
+\end{bmatrix}
+$$
+
+generalizing, it is valid $\forall~n \in N ~|~ n\geq 2$
+
 ## Similar Matrices
 
 $$
@@ -809,7 +833,7 @@ Similar matrices **have identical** [[#Eigenvalues]]. Meaning that:
 
 if $\hat{A} \sim \hat{B}$ and $\vec{v}$ is an [[#Eigenvectors]] of $\hat{B}$, then $\hat{S}\vec{v}$ is an eigenvector of $\hat{A}$.
 
-### Diagonalization
+## Diagonalization
 
 A square matrix $\hat{A}$ is diagonalizable if it is similar to a diagonal matrix $\hat{D}$, that is if there exists an invertible matrix $\hat{S}$ such that $\hat{A} = \hat{S} \hat{D} \hat{S}^{-1}$.
 
@@ -820,6 +844,31 @@ We can then express $\hat{A}^{-1}$ in terms of $\hat{S}$ and $\hat{D}$ as follow
 $$
 \hat{A}^{-1} = \hat{S} \hat{D}^{-1} \hat{S}^{-1}
 $$
+
+### Powers
+
+Let $\hat{A}$ be a diagonalizable matrix, calculating the powers $\hat{A}^n$ can be done in the following way:
+
+$$
+\hat{A}^n = \hat{S}\hat{D}^n\hat{S}^{-1} 
+$$
+
+Since $\hat{D}$ is a [[#Diagonal Matrices|diagonal matrix]], calculating $\hat{D}^n$ is an easy task.
+
+### Exponentials
+
+Let $\hat{A} = \hat{S}\hat{D}\hat{S}^{-1}$, using the powers rule then the following is true:
+
+$$
+e^{\hat{A}} = \hat{S}e^{\hat{D}}\hat{S}^{-1}
+$$
+
+### Spectral Theorem
+
+Let $\hat{A}$ be a real and symmetric matrix. There is then a real orthogonal matrix $\hat{Q}$ such that $\hat{Q}^{t}\hat{A}\hat{Q}$ is diagonal.
+
+> $\hat{Q}^{-1} = \hat{Q}^t$
+> The eigenvalues of $\hat{A}$ are real
 
 ---
 
