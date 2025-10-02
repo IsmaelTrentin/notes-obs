@@ -7,11 +7,14 @@ locale: en
 ## Ports
 
 ```text
-TRISX -> sets diretion input/output
+ANSELX -> sets ANALOG=1/DIGITAL=0
+TRISX -> sets diretion input=1/output=0
 PORTX -> reads value
 LATX -> writes value
 
 bits:
-TRISX = 0x0000 sets all 32 bits
-TRISXbits.TRISX<0-N> = 0 or 1 sets single bit
+<REG>X = <bits> -> sets all 32 bits using <bits>
+<REG>XCLR = <bitmask> -> if a bit is 1 in <bitmask>, it sets <REG>X of that                             bit position to 0
+<REG>XSET = <bitmask> -> if a bit is 1 in <bitmask>, it sets <REG>X of that                             bit position to 1
+<REG>XINV = <bitmask> -> if a bit is 1 in <bitmask>, it sets <REG>X of that                             bit position to its inverted value
 ```
