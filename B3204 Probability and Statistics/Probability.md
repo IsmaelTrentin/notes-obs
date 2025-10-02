@@ -84,3 +84,78 @@ Given $P(MA | I)$ we can obtain $P(I | MA)$ using Bayes' theorem as follows:
 $$
 P(I | MA) = P(MA | I) \cdot \frac{P(I)}{P(MA)}
 $$
+
+## Random Variable
+
+Let $(\Omega, P)$ a probability space where $\Omega = \{ \omega_{1}, \dots, \omega_{n} \}$. A random variable is a function that:
+
+$$
+X : \Omega \mapsto \mathbb{R}
+$$
+
+Random variables are divided in two categories: **Discrete** and **Continuous**.
+
+### Discrete
+
+$$
+X \in \{ x_{1}, \dots, x_{k} \}
+$$
+
+where the funzione di ripartizione is:
+
+$$
+F(x) = P(X \leq x) = \begin{cases}
+0 &\quad x < x_{1} \\
+p_{1} &\quad x_{1} \leq x \leq x_{2} \\
+p_{1} + p_{2} &\quad x_{2} \leq x \leq x_{3} \\
+\dots \\
+p_{1}+\dots+p_{n} &\quad x_{n-1} \leq x \leq x_{n} \\
+1 &\quad x \geq x_{n}
+\end{cases}
+$$
+
+and the expected value is:
+
+$$
+E[X] = \sum_{i=1}^n x_{i} \cdot P(X=x_{i})
+$$
+
+### Continuous
+
+$$
+X \subseteq \mathbb{R}
+$$
+
+### Example
+
+Flip 3 coins back to back:
+
+$$
+\Omega = \{ (T,T,T), \dots, (C,C,C) \} \quad |\Omega| = 2^3 = 8
+$$
+
+Let's define $X = \text{ \# of heads}$ having $X : \Omega \mapsto \mathbb{R}$, meaning that for an input of $\omega = (T,C,T)$ the function behaves like $X(\omega) = 2$.
+
+First off, lets define what values $X$ can have: 
+
+$$
+X \in \{ 0,1,2,3 \}
+$$
+
+> meaning that $x_{0}=0, x_{1}=1, \dots$
+
+When can then calculate the single probabilities:
+
+$$
+\begin{align}
+P(x = 0) = \frac{1}{8} &\quad P(X = 2) = \frac{3}{8} \\
+P(x = 1) = \frac{3}{8} &\quad P(X = 3) = \frac{1}{8}
+\end{align}
+$$
+
+where
+
+$$
+\sum_{i=1}^n P(X = x_{i}) = 1
+$$
+
