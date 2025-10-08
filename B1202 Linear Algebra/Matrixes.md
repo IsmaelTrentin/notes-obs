@@ -680,7 +680,7 @@ An eigenvalue is simply $\lambda$. See previous chapter [[#Eigenvectors]].
 
 For [[#mat triangolare|Triangular]] matrixes, the eigenvalues are the elements of the **main diagonal**.
 
-### Examples
+### Characteristic Polynomial
 
 $$
 \begin{gather}
@@ -869,6 +869,27 @@ Let $\hat{A}$ be a real and symmetric matrix. There is then a real orthogonal ma
 
 > $\hat{Q}^{-1} = \hat{Q}^t$
 > The eigenvalues of $\hat{A}$ are real
+
+## Cayley - Hamilton Theorem
+
+Given $\hat{A}$ and its [[#Characteristic Polynomial]] $p_{A}$, then the following is true:
+
+$$
+p(\hat{A}) = 0
+$$
+
+[[🔎]] We can use this property to express $\hat{A}^n$ as a [[Vectors#Linear Combination]] of $\hat{A}$ and $\hat{I}$.
+
+### Example
+
+Given $\hat{A}^2 = 5\hat{A} + 2\hat{I}$, calculate $\hat{A}^4$:
+
+$$
+\begin{alignat}{}
+\hat{A}^4 = \hat{A}^2 \cdot \hat{A}^2 = (5\hat{A} + 2\hat{I}) \cdot (5\hat{A} + 2\hat{I}) = 25\hat{A}^2+20\hat{A}+4\hat{I} \\
+= 25(5\hat{A} + 2\hat{I}) + 20\hat{A} + 4\hat{I} = 145\hat{A} + 54\hat{I}
+\end{alignat}
+$$
 
 ---
 
