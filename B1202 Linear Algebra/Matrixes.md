@@ -891,62 +891,45 @@ $$
 \end{alignat}
 $$
 
----
+## Homogeneous Coordinates
 
-## Use-cases
-
-### Imposte
-
-Una piccola azienda ha realizzato nel 2024 un profitto lordo $P = 668000$. Le imposte da pagare sono:
-
-imposte cantonali $C$: 7% del profitto al netto delle imposte federali e delle imposte sui rifiuti
-imposte federali $F$: 29% del profitto al netto delle imposte cantonali e delle imposte sui rifiuti
-imposta sullo smaltimento dei rifiuti $S$: 11% del profitto al netto delle imposte cantonali e federali
-
-1 definizione del problema
+given $\vec{x} = \begin{pmatrix}x_{1}\\x_{2}\\x_{3}\end{pmatrix} \in \mathbb{R}^3$, the translation $T$ by the vector $\vec{v} = \begin{pmatrix}v_{1}\\v_{2}\\v_{3}\end{pmatrix}$ in homogeneous coordinates, it's given by:
 
 $$
-\begin{align}
-C = 0.07(P - F - S) \\
-F = 0.29(P - C - S) \\
-S = 0.11(P - C - F)
-\end{align}
+T(\begin{pmatrix}
+x_{1}\\x_{2}\\x_{3}\\1
+\end{pmatrix}) 
+=
+\begin{pmatrix}
+x_{1}+v_{1} \\
+x_{2}+v_{2} \\
+x_{3}+v_{3} \\
+1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 &0 &0 &v_{1} \\
+0 &1 &0 &v_{2} \\
+0 &0 &1 &v_{3} \\
+0 &0 &0 &1
+\end{pmatrix}
+\begin{pmatrix}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+1
+\end{pmatrix}
 $$
 
-2 mettere in sistema
+Since [[Linear Functions#Translation|translations]] are **not** linear, we need to go up a dimension if we want to apply a rotation and then a translation. By using [[#Homogeneous Coordinates]] we can apply **linear** [[Linear Functions#Translation|translations]].
+
+Given $\hat{A} = \begin{pmatrix}a &b \\ c &d\end{pmatrix}$, we can transform it in the following way to apply a linear transformation:
 
 $$
-\begin{cases}
-C &+& 0.07F &+& 0.07S &=& 0.07P \\
-0.29C &+& F &+& 0.29S &=& 0.29P \\
-0.11C &+& 0.11F &+& S &=& 0.11P \\
-\end{cases}
+\begin{pmatrix}
+a &b &0 \\
+c &d &0 \\
+0 &0 &1
+\end{pmatrix}
 $$
 
-3 trasformare in forma $Ax = b$ creando $A, x, b$
-
-$$
-A = \begin{bmatrix}
-1 & 0.07 & 0.07 \\
-0.29 & 1 & 0.29 \\
-0.11 & 0.11 & 1
-\end{bmatrix}
-$$
-
-$$
-x = \begin{bmatrix}
-C \\
-F \\
-S
-\end{bmatrix}
-$$
-
-$$
-b = \begin{bmatrix}
-0.07P \\
-0.29P \\
-0.11O
-\end{bmatrix}
-$$
-
-**se e solo se** $\det(A) \ne 0$, allora si puo' risolvere utilizzando $x = A^{-1} \cdot b$
