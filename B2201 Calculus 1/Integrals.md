@@ -366,3 +366,21 @@ therefore, using $\phi$'s definition:
 $$
 \int_{a}^b f(t)dt - \int_{a}^a f(t)dt = \int_{a}^b
 f(t)dt$$
+
+## Areas
+
+### Under a Curve
+
+The area under the curve $f(x)$ limited by the $x$ axis is defined as follows:
+
+$$
+A = \int_{a}^{b} f(x) dx
+$$
+
+### Between Functions
+
+The area of a region $R$ defined by two functions $f(x)$ and $g(x)$ where $f(x) \geq g(x) ~\forall x \in [a, b]$ in the range $[a, b]$, is calculated in the following way:
+
+$$
+A = \int_{a}^{b} [f(x) - g(x)] dx
+$$
