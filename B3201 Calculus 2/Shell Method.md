@@ -46,4 +46,7 @@ $$
 V = \int_{c}^d 2\pi y \cdot [f(y) - g(y)]dy
 $$
 
+where $f(y)$ is the inverse of $f(x)$, same applies for $g(y)$.
+
 ![[cshell_rotate_x.png]]
+
