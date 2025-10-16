@@ -135,3 +135,13 @@ quindi se $\vec{b}$ **non** si puo' esprimere come LC dei vettori colonna, $b \n
 $$
 rank(A) = rank(A|b)
 $$
+
+## Translation
+
+Translation is not linear. 
+
+Given $f(\vec{x}) = \hat{A}\vec{x}$ and $g(\vec{x}) = \hat{B}\vec{x}$, then:
+
+$$
+(f \circ g) = \hat{A}\hat{B}\vec{x}
+$$
