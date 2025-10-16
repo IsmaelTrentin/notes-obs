@@ -101,7 +101,7 @@ $$
 X \in \{ x_{1}, \dots, x_{k} \}
 $$
 
-where the funzione di ripartizione is:
+where the partition function is:
 
 $$
 F(x) = P(X \leq x) = \begin{cases}
@@ -114,16 +114,174 @@ p_{1}+\dots+p_{n} &\quad x_{n-1} \leq x \leq x_{n} \\
 \end{cases}
 $$
 
-and the expected value is:
+#### Expected Value
 
 $$
 E[X] = \sum_{i=1}^n x_{i} \cdot P(X=x_{i})
 $$
 
+#### Variance
+
+$$
+Var(X) = E[(X - E[X])^2] = E[X^2] - E[X]^2 \quad \in [0, +\infty]
+$$
+
+where 
+
+$$
+E[X^2] = \sum_{i=1}^n x_{i}^2 \cdot P(X = x_{i})
+$$
+
+#### Standard Deviation
+
+$$
+\sigma = \sqrt{ Var(X) }
+$$
+
+> [[👁️]] on average
+
 ### Continuous
 
 $$
-X \subseteq \mathbb{R}
+X : \Omega \mapsto I \subseteq R \quad x \in I
+$$
+
+Given a continuous random variable, there will always be a density function $f$:
+
+$$
+f = \begin{cases}
+f(x) \geq 0 \\[6pt]
+\int_{-\infty}^{+\infty} f(x) dx = 1
+\end{cases}
+$$
+
+following:
+
+$$
+P(a \leq X \leq b) = \int_{a}^b f(x) dx
+$$
+
+and given the previous conditions with can safely say that:
+
+$$
+0 \leq P(a \leq X \leq b) \leq 1
+$$
+
+Uniform distribution of $x$:
+
+$$
+\begin{align}
+X \sim U([0,1])\\[6pt]
+f(x) = \begin{cases}
+1, &0 \leq x \leq 1 \\
+0, &\text{ else}
+\end{cases}
+\end{align}
+$$
+
+#### Expected Value
+
+While the expected value is:
+
+$$
+E[X] = \int_{-\infty}^{+\infty} x\cdot f(x)dx
+$$
+
+where $f(x)$ is the distribution.
+
+#### Variance
+
+$Var$ and $\sigma$ remain [[#Variance|unchanged]] but to calculate $E[X^2]$ we apply the following:
+
+$$
+E[X^2] = \int_{-\infty}^{+\infty} x^2\cdot f(x)dx
+$$
+
+### Bernoulli Distribution
+
+Bernoulli distribution is a [[#Random Variable#Discrete|discrete random variable]] with value that are either $0$ or $1$.
+
+$$
+X \in \{ 0, 1 \}
+$$
+
+where the probabilities can be calculated as follows:
+
+$$
+\begin{align}
+P(X = 0) = 1 - p \\
+P(X = 1) = p
+\end{align}
+$$
+
+where $0\leq p \leq 1$, giving us:
+
+$$
+X \sim B(1, p)
+$$
+
+that is, $X$ is distributed according to a Bernoulli distribution with parameter $p$.
+
+#### Expected Value
+
+$$
+\begin{alignat}{}
+E[X] = 0\cdot(1-p) + 1\cdot p = p\\
+E[X^2] = 0^2 \cdot (1-p) + 1^2\cdot p = p
+\end{alignat}
+$$
+
+#### Variance
+
+$$
+Var(X) = p - p^2 = p(1-p)
+$$
+
+### Binomial Distribution
+
+Sum of multiple [[#Bernoulli Distribution]]s.
+
+$$
+X = X_{1} + X_{2} + \dots + X_{n}
+$$
+
+where $X_{i} \sim B(1, p),~~ n \in \mathbb{N}$ and are independent.
+
+$X$ can be of the following values:
+
+$$
+X \in \{ 0, 1, 2, \dots, n \}
+$$
+
+Therefore the probability, using the [[Binomial Coefficient]], is:
+
+$$
+P(X = K) = \binom{n}{K} \cdot p^K \cdot (1 - p)^{n-K} \quad\quad 0 \leq K \leq n
+$$
+
+> let's take for example a batch of matches that you can either win or lose:
+> $\binom{n}{K}$ combine $K$ victories on $n$ matches
+> $p^K$ victories
+> $(1-p)^{n-K}$ defeats
+
+#### Expected Value
+
+$$
+E[X] = n\cdot p
+$$
+
+#### Variance
+
+$$
+Var(X) = n \cdot p \cdot (1 - p)
+$$
+
+### Exponentials
+
+Exponentials usually follow this rule:
+
+$$
+f(x) = \lambda \cdot e^{\lambda \cdot x}
 $$
 
 ### Example
