@@ -203,9 +203,7 @@ $$
 We know that for a simple solid of revolution given by a function $f(x)$, we can apply the following formula:
 
 $$
-\bbox[14pt, border: 1px solid black]{
 V_{x} = \pi \int_{a}^b y^2dx
-}
 $$
 
 Now given a parametric curve $c$ defined as such:

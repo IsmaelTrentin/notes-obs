@@ -35,7 +35,9 @@ $$
 while for a rotation around the vertical [[Lines|line]] $x=k$ we have:
 
 $$
-V = \int_{a}^b 2\pi (x - k) \cdot [f(x) - g(x)] dx
+\bbox[14pt, border: 1px solid black]{
+V_{y} = \int_{a}^b 2\pi (x - k) \cdot [f(x) - g(x)] dx
+}
 $$
 
 ![[cshell_rotate_y.png]]
@@ -43,7 +45,9 @@ $$
 If the rotation is around the $x$ axis instead, we apply the following integral:
 
 $$
-V = \int_{c}^d 2\pi y \cdot [f(y) - g(y)]dy
+\bbox[14pt, border: 1px solid black]{
+V_{x} = \int_{c}^d 2\pi y \cdot [f(y) - g(y)]dy
+}
 $$
 
 where $f(y)$ is the inverse of $f(x)$, same applies for $g(y)$.
