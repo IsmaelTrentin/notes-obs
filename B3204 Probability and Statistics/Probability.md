@@ -256,13 +256,17 @@ $$
 Therefore the probability, using the [[Binomial Coefficient]], is:
 
 $$
-P(X = K) = \binom{n}{K} \cdot p^K \cdot (1 - p)^{n-K} \quad\quad 0 \leq K \leq n
+\bbox[14pt, border: 1px solid black]{
+P(X = K) = \binom{n}{K} \cdot p^K \cdot (1 - p)^{n-K}
+} \quad\quad 0 \leq K \leq n
+
 $$
 
 > let's take for example a batch of matches that you can either win or lose:
 > $\binom{n}{K}$ combine $K$ victories on $n$ matches
 > $p^K$ victories
 > $(1-p)^{n-K}$ defeats
+
 
 #### Expected Value
 
@@ -274,6 +278,28 @@ $$
 
 $$
 Var(X) = n \cdot p \cdot (1 - p)
+$$
+
+
+### Poisson Distribution
+
+This distribution is a specific case of the [[#Binomial Distribution]] with the following limits:
+
+$$
+\begin{alignat}{}
+X \sim P(\lambda) \\[6pt]
+n \to \infty \\
+p \to 0 \\
+n \cdot p \to \lambda
+\end{alignat}
+$$
+
+By calculating the limit then we have the following formula:
+
+$$
+\bbox[14pt, border: 1px solid black]{
+P(X = K) = \frac{\lambda^K \cdot e^{-\lambda}}{K!}
+}
 $$
 
 ### Exponentials
