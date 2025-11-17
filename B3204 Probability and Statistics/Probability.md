@@ -51,7 +51,7 @@ $$
 
 ## Event Factorization
 
-![[event_factorization.excalidraw]]
+![[event_factorization.excalidraw|center]]
 
 $$
 \begin{align}
@@ -94,6 +94,10 @@ X : \Omega \mapsto \mathbb{R}
 $$
 
 Random variables are divided in two categories: **Discrete** and **Continuous**.
+
+The expected value is a **linear** operator.
+
+The variance is a **quadratic** operator, therefore if we extract values they will need to be squared.
 
 ### Discrete
 
@@ -165,6 +169,12 @@ and given the previous conditions with can safely say that:
 
 $$
 0 \leq P(a \leq X \leq b) \leq 1
+$$
+
+while
+
+$$
+P(X \geq b) = \int_{b}^{max} f(x)dx
 $$
 
 Uniform distribution of $x$:
@@ -245,6 +255,12 @@ $$
 X = X_{1} + X_{2} + \dots + X_{n}
 $$
 
+$$
+X \sim B(n, p)
+$$
+
+where $n$ is the number of experiments and $p$ the probability.
+
 where $X_{i} \sim B(1, p),~~ n \in \mathbb{N}$ and are independent.
 
 $X$ can be of the following values:
@@ -302,12 +318,61 @@ P(X = K) = \frac{\lambda^K \cdot e^{-\lambda}}{K!}
 }
 $$
 
+### Uniform Distribution
+
+The uniform distribution is a type of [[#Continuous]] [[#Random Variable]]. Denoted as $X \sim U [a,b]$.
+
+$$
+f(x) = \begin{cases}
+\frac{1}{b-a} \quad a \leq x \leq b \\[6pt]
+0 \quad \text{else}
+\end{cases}
+$$
+
+### Normal Distribution
+
+[[#Continuous]] [[#Random Variable]] denoted as $X \sim N[0,1]$ described by the function:
+
+$$
+f(x) = \frac{1}{\sqrt{ 2\pi \sigma^{2} }} \cdot e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}} }
+$$
+
+Where $E[X] = 0$ and $Var(X) = \sigma^{2}$
+
+#### Standardization
+
+$$
+Z = \frac{X-\mu}{\sigma} \sim N[\mu, \sigma^{2}]
+$$
+
+in this case then $E[X] = \mu$ and $Var(X) = \sigma^{2}$
+
+there fore we can calculate the probability in the following way:
+
+$$
+P(X \leq k) = P\left( \frac{x-\mu}{\sigma } \leq \frac{k-\mu}{\sigma} \right)
+$$
+
+TODO uses linearity check picture on phone
+
 ### Exponentials
 
-Exponentials usually follow this rule:
+Exponential distribution is a type of [[#Continuous]] [[#Random Variable]] that usually follows this rule:
 
 $$
 f(x) = \lambda \cdot e^{\lambda \cdot x}
+$$
+
+#### Expected Value
+
+$$
+E[X] = \frac{1}{\lambda}
+$$
+
+#### Variance
+
+$$
+Var(X) = \frac{1}{\lambda^2}
 $$
 
 ### Example
