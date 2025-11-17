@@ -1,3 +1,8 @@
+---
+tags:
+  - oop
+locale: en
+---
 
 ```text
 MyClass.class
@@ -44,7 +49,7 @@ same rules apply for methods.
 
 To access private fields or invoke private methods and methods use `target.setAccessible(true)` before accessing or calling.
 
-To all static methods use `reflectedMethod.invoke(null)`.
+To call static methods use `reflectedMethod.invoke(null)`.
 
 ## Constructors and Instances
 
