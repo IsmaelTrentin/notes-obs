@@ -16,7 +16,7 @@ $$
 
 where $h$ is the height of the cylinder and $\Delta r$ is the width of the internal (void) cylinder.
 
-![[c_shell.excalidraw]]
+![[c_shell.excalidraw|center]]
 
 Provided that these variables have been read from the graph, if we want to calculate the volume of a solid of revolution turning **around the y axis**, we can use the following integral:
 
