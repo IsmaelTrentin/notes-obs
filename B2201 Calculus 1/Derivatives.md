@@ -61,8 +61,6 @@ $$
 
 where $m=f'(x_{0})$ and $q=-f'(x_{0})x_{0}+f(x_{0})$.
 
-TODO: transcribe derivate notevoli e regole derivazione
-
 ## L'Hopital Rule
 
 It is applicable when we have the indefinite forms:
