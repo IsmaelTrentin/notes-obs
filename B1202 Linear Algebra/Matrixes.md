@@ -674,7 +674,7 @@ A square matrix can have **multiple eigenvectors**, therefore multiple eigenvalu
 
 In general the non-multiple number $N$ of eigenvectors for a matrix is the number of columns.
 
-### Eigenvalues
+## Eigenvalues
 
 An eigenvalue is simply $\lambda$. See previous chapter [[#Eigenvectors]].
 
@@ -733,7 +733,7 @@ $$
 \lambda \in S_{\hat{A}} \implies \frac{1}{\lambda} \in S_{\hat{A}^{-1}}
 $$
 
-### Eigenspaces
+## Eigenspaces
 
 Let $\lambda$ be an [[#Eigenvalues|eigenvalue]] of $\hat{A}$. The Eigenspace of $\lambda$ is:
 
@@ -844,6 +844,10 @@ We can then express $\hat{A}^{-1}$ in terms of $\hat{S}$ and $\hat{D}$ as follow
 $$
 \hat{A}^{-1} = \hat{S} \hat{D}^{-1} \hat{S}^{-1}
 $$
+
+TODO: WHAT ARE S AND D
+D is diag with eigenvalues
+S is mat of eigenvectors
 
 ### Powers
 
