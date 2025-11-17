@@ -46,7 +46,7 @@ Fields declared inside of annotations can be of the following types:
 
 - primitive
 - String
-- Class
+- ClassT
 - enum
 - annotation
 - array of the preceding types
